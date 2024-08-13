@@ -1,0 +1,406 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10.5rem;
+  z-index: 200;
+}
+
+.iconlink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.4rem;
+  color: rgb(214, 214, 214);
+  font-size: 13px;
+  /* Tailwind text-2xl */
+  transition: transform 0.2s;
+  background-color: #004360;
+}
+
+.iconlink::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 70%;
+  white-space: nowrap;
+  margin-left: 1rem;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateX(5px);
+  background-color: #ff6b0b;
+  color: #f1f1f1;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0px 3px 3px 0px;
+}
+
+
+
+.iconlink:hover::after {
+  opacity: 1;
+  transform: translateX(-5px);
+  /* Slide to its natural position */
+}
+
+.icon {
+  color: rgb(230, 230, 230);
+  font-size: 1.6rem;
+  transition: transform 0.5s;
+}
+
+.icon:hover {
+  color: #ff6b0b;
+  transform: scale(1.3);
+}
+
+.terminal {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+.scrollUp {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 10;
+  color: #000;
+  cursor: pointer;
+}
+
+.scrollUp:hover {
+  color: #ff6b0b;
+}
+
+.exchangeRate {
+  position: fixed;
+  right: 0px;
+  z-index: 10;
+  transition: .5s;
+  background-color: red;
+  width: 20%;
+  height: 200px;
+  top: 35%;
+}
+
+.exchangeRate2 {
+  position: fixed;
+  bottom: 260px;
+  right: 90px;
+  z-index: 10;
+  transition: .5s;
+}
+
+.infoDetailwza {
+  display: grid;
+  grid-template-columns: 60% 15%;
+  gap: 5%;
+}
+
+
+.exchangeRate3 {
+  position: fixed;
+  bottom: 197px;
+  right: 90px;
+  z-index: 10;
+  transition: .5s;
+}
+
+.exchangeRate4 {
+  position: fixed;
+  bottom: 130px;
+  right: 90px;
+  z-index: 10;
+  transition: .5s;
+}
+
+/* .exchangeRate p {
+  background-color: #004360;
+  height: 45px;
+  width: 45px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  border-radius: 999px;
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: .5s;
+} */
+.exchangeRate p:hover {
+  background-color: #ff6b0b;
+  color: #ebebeb;
+  /* border-radius: 7px; */
+  /* transition: .3s; */
+}
+
+.exchangeRate2 p {
+  background-color: #ff6b0b;
+  height: 36px;
+  width: 160px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.exchangeRate3 p {
+  background-color: #ff6b0b;
+  height: 36px;
+  width: 160px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+
+}
+
+.exchangeRate4 p {
+  background-color: #ff6b0b;
+  height: 36px;
+  width: 160px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.exchangeRate:hover {
+  transform: scale(1.1);
+}
+
+
+.popTitle {
+  font-size: 2vw;
+  font-weight: 700;
+  color: rgb(255, 123, 0);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 17px;
+  border-bottom: 2px solid rgb(255, 123, 0);
+}
+
+.popOuter p {
+  font-size: 1.3vw;
+  padding: 15px;
+}
+
+@keyframes scaleColorAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+    color: #ff6b0b;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animatedIcon {
+  animation: scaleColorAnimation 1.5s infinite;
+}
+
+/* styles.css */
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ----------------------------------- popup table ------------------------------------*/
+
+.popexchangeHeader {
+  font-size: 50px;
+  color: #ff6b0b;
+}
+
+.popexchange table {
+  /* padding: 3px; */
+  width: 100%;
+  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+}
+
+.popexchange th {
+  justify-content: left;
+  text-align: left;
+  padding: 2% 0% 2% 0%;
+  padding-left: 1%;
+  font-size: 15px;
+  color: #636363;
+  background-color: rgb(242, 242, 242);
+  /* width: 100px; */
+}
+
+.popexchange td {
+  padding: 1%;
+  font-size: 16px;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.active {
+  background-color: rgb(242, 242, 242);
+}
+
+
+.infoDetail {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  border-radius: 3px;
+}
+
+.infoDetail label {
+  background-color: #ff6b0b;
+  color: #ffffff;
+  /* margin: auto; */
+  margin-right: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-radius: 2px;
+  height: 90%;
+  padding-right: 10px;
+}
+
+.infoDetail1 {
+  margin-top: -179px;
+}
+
+.infoDetail2 {
+  margin-top: -120px;
+}
+
+.infoDetail3 {
+  margin-top: -60px;
+}
+
+
+/* Hide the rows per page selector */
+.hide-rows-per-page .MuiTablePagination-actions {
+  display: none;
+}
+
+/* Optionally, hide the entire pagination component if you don't need it */
+.hide-pagination .MuiDataGrid-footer {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-container {
+  animation: slideIn 0.5s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-container {
+  animation: slideIn .5s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {}
+
+/* ----------------------------------- popup table ------------------------------------*/
+@media screen and (max-width: 900px) {
+
+
+  .popexchangeHeader {
+    font-size: 50px;
+    color: #ff6b0b;
+  }
+
+  .popexchange table {
+    width: 100%;
+    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+  }
+
+  .popexchange th {
+    justify-content: left;
+    text-align: left; 
+    padding: 0.5% 0% 0.5% 0%;
+    font-size: 11px;
+    color: #636363;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .popexchange td {
+    padding: 3px;
+    font-size: 10px;
+    color: #3a3a3a;
+    text-align: left;
+  }
+
+  .active {
+    background-color: rgb(242, 242, 242);
+  }
+
+
+}

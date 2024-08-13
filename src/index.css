@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: -100;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ .dateClassName{
+  font-size: 3vw;
+  font-weight: 700;
+  size: 30px;
+  color: #004360;
+  margin-left: -110px;
+ }
+
+ .dateClassName2{
+  font-size: 3vw;
+  font-weight: 700;
+  size: 30px;
+  color: #004360;
+  margin-right: 20px;
+ }
+ /* .root{
+ width: 110%;
+ } */
+
+ /* .vertical-timeline-element{
+  background-color: rgb(240, 240, 240);
+ } */

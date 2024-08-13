@@ -1,0 +1,252 @@
+/* ----------------------------- newsAndExchange ------------------------------- */
+.newsAndExchange {
+  padding: 5%;
+  padding-top: 2px;
+}
+
+.newsHeader {
+  font-size: 36px;
+  font-weight: 600;
+  color: #003460;
+  text-align: center;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 20px;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: center;
+  column-gap: 3%;
+  row-gap: 40px;
+}
+
+.newsContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 21px -2px rgba(0, 0, 0, 0.2);
+  padding: 3%;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.newsContent img {
+  width: 100%;
+  /* Adjust image width */
+  height: 200px;
+  /* Adjust image height */
+}
+
+.newsContent label {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: left;
+  padding-top: 1px;
+  color: #ff6b0b;
+  border-left: 3px solid #ff6b0b;
+  margin: 10px;
+  margin-left: 5px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.newsContent p {
+  text-align: left;
+  font-size: 14px;
+  flex-grow: 1;
+  /* Allows paragraph to grow and fill available space */
+  padding: 0 2% 2% 2%;
+  /* Adjust padding to your preference */
+}
+
+.moreNews p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1% 2%;
+  margin-top: auto;
+  /* Pushes the Read More to the bottom */
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.moreNews p:hover {
+  color: #ff6b0b;
+}
+
+.seeAllNews {
+  background-color: #ff8f12;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: .5s;
+}
+
+.seeAllNews:hover {
+  transform: scale(1.1);
+  background-color: #ff6b0b;
+  color: #ffffff;
+}
+
+.seeAllNews p:hover {
+  color: #ff6b0b;
+}
+
+.seeAllNews p:hover {
+  color: #ff6b0b;
+}
+
+/* ----------------------------- */
+
+.popOuter {
+  display: grid;
+  justify-content: center;
+}
+
+.popOuter strong {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(255, 123, 0);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 17px;
+  border-bottom: 2px solid rgb(255, 123, 0);
+  justify-content: center;
+}
+
+.popOuter p {
+  font-size: 16px;
+  padding: 1px 5px;
+  text-align: justify;
+}
+
+.popOuter h6 {
+  font-size: 16px;
+  padding: 10px;
+  padding-top: 1px;
+  text-align: justify;
+  /* margin-top: 15px; */
+}
+
+.popImg {
+  display: grid;
+}
+
+.popImg img {
+  width: 50%;
+  margin: auto;
+  height: 250px;
+  border-radius: 10px; 
+}
+
+.agarImage img {
+  /* height: 380px; */
+  width: 100%;
+  background-size: cover;
+}
+
+/* styles.module.css */
+.customSwalShow {
+  animation-duration: .5s;
+}
+
+.customSwalHide {
+  animation-duration: 0.5s;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  /* Take up full viewport height to center vertically */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border-left-color: #007bff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeredContainer img {
+  background-size: 50%;
+}
+
+
+@media screen and (max-width: 900px) {
+
+
+  .newsAndExchange {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3%;
+    justify-content: center;
+  }
+
+  .news {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    column-gap: 4%;
+    row-gap: 40px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .newsAndExchange {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3%;
+    justify-content: center;
+  }
+
+  .news {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 40px;
+  }
+
+  .popOuter strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 123, 0);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 17px;
+    border-bottom: 2px solid rgb(255, 123, 0);
+    justify-content: center;
+  }
+
+  .popOuter p {
+    font-size: 14px;
+    padding: 1px 5px;
+    text-align: justify;
+  }
+
+}

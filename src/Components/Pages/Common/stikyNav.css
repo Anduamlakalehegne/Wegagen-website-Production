@@ -1,0 +1,13 @@
+/* Hide the rows per page selector */
+.hide-rows-per-page .MuiTablePagination-actions {
+    display: none;
+}
+
+/* Optionally, hide the entire pagination component if you don't need it */
+.hide-pagination .MuiDataGrid-footer {
+    display: none; 
+}
+
+.evenRow {
+    background-color: #eeeeee; /* Light grey background */
+  }

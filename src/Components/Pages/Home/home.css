@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 1200px; */
+    margin: auto;
+    /* width: 80px; */
+    width: 200px;
+    height: 100%;
+    margin-bottom: 50px;
+    padding: 70px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 550px;
+}
+
+.text-section {
+    flex: 1;
+    padding: 0 50px;
+    text-align: justify;
+    margin: 30px;
+}
+
+.text-section h3 {
+    font-size: 45px;
+    font-weight: 600;
+    display: flex;
+    justify-content: left;
+    color: #ff8f12;
+    padding-top: 20px;
+}
+
+.text-section h4 {
+    font-size: 35px;
+    font-weight: 600;
+    display: flex;
+    justify-content: left;
+    color: #004360;
+    margin: 20px 0px;
+}
+
+
+.text-section p {
+    color: #666;
+    font-size: 18px;
+}
+
+.app-store-links {
+    margin-top: 20px;
+}
+
+.app-store, .google-play {
+    display: inline-block;
+    width: 135px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.app-store {
+    background-image: url('app-store-badge.png');
+}
+
+.google-play {
+    background-image: url('google-play-badge.png');
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section {
+        margin-bottom: 20px;
+    }
+
+    .app-store-links {
+        justify-content: center;
+    }
+}
+
+/* styles.module.css */
+.customSwalShow {
+    animation-duration: .1s; 
+  }
+  
+  .customSwalHide {
+    animation-duration: 0.5s;
+  }
+  
+  /* AnimationStyles.module.css */
+  .customAnimationDuration {
+    animation-duration: 5s; /* Change the duration to whatever you need */
+  }
+  

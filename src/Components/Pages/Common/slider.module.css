@@ -1,0 +1,24 @@
+.centeredLoader {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+ }
+ .sliderImage img{
+   background-size: cover;
+   /* height: 150px; */
+   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+
+    .sliderImage{
+        /* height: 420px; */ 
+     }
+     .sliderImage img{
+        background-size: cover;
+        /* height: 150px; */
+        width: 900px;
+     }
+
+}

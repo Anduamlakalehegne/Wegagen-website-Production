@@ -1,0 +1,31 @@
+.leftNavBars {
+    display: flex;
+    justify-content: center;
+  }
+  .aboutUsMenu{
+    display: none;
+  }
+  
+  .shortInfo {
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    width: 900px;
+    margin-top: 0;
+    text-align: left;
+    color: #ff6b0b;
+    border-bottom: 5px solid #ff6b0b;
+    top: 20;
+  }
+  
+  .shortInfo p {
+    padding: 3px;
+    font-size: 17px;
+    padding-left: 3%;
+    cursor: pointer;
+  }
+  
+  .shortInfo p:hover {
+    background-color: #ff6b0b;
+    color: #ffffff;
+  }
+  

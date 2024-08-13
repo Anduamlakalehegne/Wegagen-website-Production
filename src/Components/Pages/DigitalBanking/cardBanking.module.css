@@ -1,0 +1,328 @@
+.agarImage img {
+  width: 100%;
+  background-size: cover;
+}
+
+.RequirementTitle {
+  font-size: 25px;
+  text-align: center;
+  color: #ff6b0b;
+  margin-bottom: 20px;
+}
+
+.title h5 {
+  font-size: 27px;
+  text-align: left;
+  color: #ff6b0b;
+  font-weight: 500;
+  margin-left: 8%;
+  margin-top: 30px;
+}
+
+.bottomInfo {
+  font-size: 17px;
+  text-align: justify;
+  margin: 3% 5%;
+}
+
+.features {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.featuresTitle {
+  display: grid;
+  grid-template-columns: 10% 15px 50%;
+  gap: 1px;
+  padding: 1%;
+  margin-left: 8%;
+}
+
+.features p {
+  font-size: 21px;
+  text-align: justify;
+}
+
+.features li {
+  font-size: 17px;
+  text-align: justify;
+  margin-left: 16.4%;
+  padding: 5px;
+}
+
+.moreFeatures {
+  display: grid;
+  grid-template-columns: 19% 80%;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.moreFeatures2 {
+  display: grid;
+  grid-template-columns: 19% 80%;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.rightFeatures {
+  background-color: rgb(240, 240, 240);
+  padding: 5%;
+  border-right: 2px solid #ff6b0b;
+}
+
+.rightFeatures h6 {
+  text-align: left;
+  font-size: 21px;
+  font-weight: 500;
+  color: #ff6b0b;
+}
+
+.rightFeatures p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.leftFeatures {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkIcon {
+  font-size: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  margin: auto;
+  color: #ff6b0b;
+}
+
+.headerTitle {
+  font-size: 23px;
+  /* font-weight: 600; */
+  color: #ff6b0b;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 27% 27% 27%;
+  justify-content: center;
+  column-gap: 3%;
+  padding: 2%;
+  margin-top: 80px;
+}
+
+.card1 {
+  flex: 1;
+  min-width: 28%;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card1:hover {
+  transform: translateY(-15px);
+}
+
+.card1 object {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  transform: rotate(-10deg);
+  transition: 0.5s;
+}
+
+.card1 object:hover {
+  transform: scale(1.2);
+}
+
+.card1 h6 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ff6b0b;
+  margin: 35px 0 10px;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.card1 h6 span {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ff8f12;
+}
+
+.card1 p {
+  font-size: 15px;
+  color: rgb(97, 97, 97);
+  text-align: justify;
+  padding-left: 5%;
+  flex-grow: 1;
+}
+
+.readMore {
+  align-self: flex-start;
+  /* Align button to the start of the flex container */
+  background-color: #ff8f12;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+.readMore:hover {
+  background-color: black;
+  color: aliceblue;
+}
+
+/* ----------------------------- */
+
+.popOuter {
+  display: grid;
+  justify-content: center;
+}
+
+.popTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 123, 0);
+  margin-bottom: 10px;
+}
+
+.popOuter p {
+  font-size: 16px;
+  padding: 1px 5px;
+  text-align: justify;
+  /* margin-top: 100px; */
+}
+
+.popOuter h6 {
+  font-size: 16px;
+  padding: 10px;
+  padding-top: 1px;
+  text-align: justify;
+  /* margin-top: 15px; */
+}
+
+.description p {
+  text-align: left;
+  font-size: 18px;
+  margin-left: 8%;
+  margin-top: 10px;
+}
+@media screen and (max-width: 900px) {
+
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 15%;
+    margin-top: 80px;
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+  .card1 p {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .title h5 {
+    font-size: 20px;
+    text-align: left;
+    color: #ff6b0b;
+    font-weight: 500;
+    margin-left: 15%;
+    margin-top: 20px;
+  }
+
+  .description p {
+    font-size: 15px;
+    margin-left: 15%;
+  }
+
+  .features li {
+    font-size: 14px;
+    text-align: justify;
+    margin-left: 16.4%;
+    padding: 5px;
+  }
+
+  .RequirementTitle {
+    font-size: 18px;
+    text-align: center;
+    color: #ff6b0b;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 10%;
+    margin-top: 80px;
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+
+  .card1 object {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 10%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .card1{
+    margin-bottom: 50px; 
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+}

@@ -1,0 +1,141 @@
+.container {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.container th {
+    background-color: #ff6b0b;
+    border: 1px solid #444444;
+    padding: 15px;
+    text-align: left;
+    color: #000;
+}
+
+.container td {
+    /* padding: 3px; */
+    padding-left: 10px;
+    border: 1px solid #444444;
+}
+
+.headerRow { 
+    background-color: #004360;
+    color: #ffffff;
+    padding: 5px;
+}
+.termsTitle{
+    font-size: 25px;
+    margin: 20px;
+    color: #004360;
+}
+
+.subHeaderRow {
+    background-color: #ff8e42;
+    color: #000;
+}
+
+.establishment {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 2%;
+    margin-bottom: 100px;
+}
+
+.leftNavBars {
+    display: flex;
+    justify-content: center;
+    margin-left: 3%;
+}
+
+.aboutUsMenu { 
+    display: none;
+}
+
+.shortInfo {
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    width: 90%;
+    text-align: left;
+    padding: 5px 0px;
+    padding-left: 3%;
+    color: #007070;
+    border-bottom: 5px solid #007070;
+    height: 300px;
+    padding-top: 30px;
+    margin-left: 80px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+}
+
+.shortInfo p {
+    padding: 2px;
+    font-size: 16px;
+    padding-left: 3%;
+    cursor: pointer;
+}
+
+.shortInfo p:hover {
+    background-color: #ff6b0b;
+    color: #ffffff;
+}
+.popupshortInfo {
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    text-align: left;
+    color: #007070;
+    border-bottom: 5px solid #007070;
+    top: 20;
+    font-size: 15px;
+    width: 100%;
+  }
+  .popupshortInfo p{
+    cursor: pointer;
+    padding: 3px; 
+    margin: 5px;
+  }
+
+@media screen and (max-width: 900px) { 
+
+    .establishment {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 1%;
+      margin-bottom: 100px;
+      margin: 10px;
+    }
+  
+    .leftNavBars {
+      display: none;
+    }
+  
+    .aboutUsMenu {
+      display: block;
+      position: fixed;
+      top: 10;
+      bottom: 30px;
+      background-color: #ff6b0b;
+      padding: 7px;
+      z-index: 100;
+      color: #ffffff;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+
+  }
+
+  @media screen and (max-width: 700px) { 
+
+    .termsTitle{
+        font-size: 21px;
+        margin: 20px;
+        color: #004360;
+    }
+    .container td {
+        padding: 3px;
+        padding-left: 3px;
+        font-size: 14px;
+    }
+  }

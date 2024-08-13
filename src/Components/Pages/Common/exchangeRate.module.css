@@ -1,0 +1,206 @@
+.scrollUp {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 10;
+    color: #000;
+    cursor: pointer;
+  }
+  .scrollUp:hover {
+    color: #ff6b0b; 
+  }
+  .exchangeRate {
+    position: fixed;
+    right: 0px; 
+    z-index: 10; 
+    transition: .5s;
+    background-color: red;
+    width: 20%;
+    height: 200px; 
+    top: 35%;
+  }
+ .exchangeRate2 {
+    position: fixed;
+    bottom: 260px;
+    right: 90px; 
+    z-index: 10; 
+    transition: .5s;
+  }
+
+  .infoDetailwza{
+    display: grid;
+    grid-template-columns: 60% 15%;
+    gap: 5%;
+  }
+    
+
+  .exchangeRate3 {
+    position: fixed;
+    bottom: 197px;
+    right: 90px; 
+    z-index: 10; 
+    transition: .5s;
+  }
+  .exchangeRate4 {
+    position: fixed;
+    bottom: 130px;
+    right: 90px; 
+    z-index: 10; 
+    transition: .5s;
+  }
+
+  /* .exchangeRate p {
+    background-color: #004360;
+    height: 45px;
+    width: 45px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    border-radius: 999px;
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: .5s;
+  } */
+  .exchangeRate p:hover{
+    background-color: #ff6b0b;
+    color: #ebebeb;
+    /* border-radius: 7px; */
+    /* transition: .3s; */
+  }
+
+  .exchangeRate2 p {
+    background-color: #ff6b0b;
+    height: 36px;
+    width: 160px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .exchangeRate3 p {
+    background-color: #ff6b0b;
+    height: 36px;
+    width: 160px;
+    color: #ffffff;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+  }
+  .exchangeRate4 p {
+    background-color: #ff6b0b;
+    height: 36px;
+    width: 160px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .exchangeRate:hover{
+    transform: scale(1.1);
+  }
+
+  .popOuter {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .popTitle {
+    font-size: 2vw;
+    font-weight: 700;
+    color: rgb(255, 123, 0);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 17px;
+    border-bottom: 2px solid rgb(255, 123, 0);
+  }
+  .popOuter p {
+    font-size: 1.3vw;
+    padding: 20px;
+  }
+  
+  /* ----------------------------------- popup table ------------------------------------*/
+  
+  .popexchangeHeader {
+    font-size: 2px;
+    font-weight: 500;
+    color: #ff6b0b;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  
+  .popexchange table {
+    padding: 3px;
+    width: 100%;
+    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+  }
+  .popexchange th {
+    justify-content: left;
+    text-align: left;
+    padding: 5% 1% 5% 1%;
+    padding-left: 1%;
+    font-size: 15px;
+    color: #636363;
+    background-color: rgb(242, 242, 242);
+    width: 100px;
+  }
+  
+  .popexchange td {
+    padding: 1%;
+    font-size: 15px;
+    color: #3a3a3a;
+    text-align: left;
+  }
+  .active {
+    background-color: rgb(242, 242, 242);
+  }
+
+
+  .infoDetail{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    border-radius: 3px;
+  }
+  .infoDetail label{
+    background-color: #ff6b0b;
+    color: #ffffff;
+    /* margin: auto; */
+    margin-right: 20px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 2px;
+    height: 90%;
+    padding-right: 10px;
+  }
+
+  .infoDetail1{
+    margin-top: -179px;
+  }
+  .infoDetail2{
+    margin-top: -120px;
+  }
+  .infoDetail3{
+    margin-top: -60px;
+  }

@@ -1,0 +1,176 @@
+/* ----------------------------- news ------------------------------- */
+
+.serviceimage object {
+    height: 30vh; 
+    width: 99.9%;
+    background-size: cover;
+    display: flex;
+    margin-top: -3px;
+  }
+  
+  .newsAndExchange {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3%;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5%;
+  }
+  .newsHeader {
+    font-size: 36px;
+    font-weight: 600;
+    color: #003460;
+    text-align: center;
+    align-items: center;
+    /* padding: 2%; */
+    /* margin-bottom: 20px; */
+  }
+  
+  .news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3%;
+  }
+  
+  .newsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content space-between */
+    box-shadow: 0px 0px 21px -2px rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    margin-bottom: 20px;
+    height: 100%; /* Ensures that all cards have the same height */
+  }
+  
+  .newsContent img {
+    width: 100%; /* Adjust image width */
+    height: 200px; /* Adjust image height */
+  }
+  
+  .newsContent label {
+    font-size: 17px;
+    font-weight: 500;
+    color: #ff6b0b;
+    border-left: 3px solid #ff6b0b;
+    margin: 10px 0;
+    padding-left: 10px;
+  
+  
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: left;
+    padding-top: 1px;
+    color: #ff6b0b;
+    border-left: 3px solid #ff6b0b;
+    margin: 10px;
+    margin-left: 5px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .newsContent p {
+    text-align: left; 
+    font-size: 14px;
+    flex-grow: 1; /* Allows paragraph to grow and fill available space */
+    padding: 0 2% 2% 2%; /* Adjust padding to your preference */
+  }
+  
+  .moreNews p{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 1% 2%; 
+    margin-top: auto; /* Pushes the Read More to the bottom */
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .moreNews p:hover {
+    color: #ff6b0b;
+  }
+  
+  .news label {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: left;
+    padding-top: 1px;
+    color: #ff6b0b;
+    border-left: 3px solid #ff6b0b;
+    margin: 10px;
+    margin-left: 5px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .newsImgs {
+    background: url("../../../assets/Images/news.png") no-repeat center; 
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    background-color: red;
+  }
+  .newsContent {
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 3%;
+  }
+  
+  .leftImgs {
+    background: url("../../../assets/Images/news.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    background-color: red;
+  }
+  
+  /* ----------------------------- */
+  
+  .popOuter {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .popTitle {
+    font-size: 2vw;
+    font-weight: 700;
+    color: rgb(255, 123, 0);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 17px;
+    border-bottom: 2px solid rgb(255, 123, 0);
+  }
+  .popOuter p {
+    font-size: 16px;
+    padding: 1px 5px;
+    text-align: justify;
+    /* margin-top: 100px; */
+  }
+  
+  .popOuter h6 {
+    font-size: 16px;
+    padding: 10px;
+    padding-top: 1px;
+    text-align: justify;
+    /* margin-top: 15px; */
+  }
+  
+  .popImg {
+    display: grid;
+  }
+  .popImg img {
+    width: 50%;
+    margin: auto;
+    height: 250px;
+    border-radius: 10px;
+  }
+  
+  .agarImage img{
+    width: 100%;
+    background-size: cover;
+  }
+
+  
+  

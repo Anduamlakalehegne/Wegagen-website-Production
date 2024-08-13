@@ -1,0 +1,149 @@
+.footer{
+    background-color: #004360;
+    width: 100%;
+    color: rgb(209, 209, 209);
+    padding: 2% 5%;
+    padding-bottom: 0px;
+    font-weight: 550;
+    margin-top: 200px;
+}
+
+.footerContents{
+    display: grid;
+    grid-template-columns: 27% 20% 22% 22%;
+    column-gap: 2%;
+    justify-content: center;
+    margin-bottom: 50px; 
+    margin-left: 50px;
+    
+}
+
+.contacts p{
+    font-size: 15px;
+    text-align: left;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.usefulLinkd p{
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+    padding: 5px;
+}
+.usefulLinkd p:hover{
+    color: #ffffff;
+}
+
+
+.customerSupport p{
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+}
+.customerSupport p:hover{ 
+    color: #ffffff; 
+}
+
+.customerSupport2 p{
+    padding: 2px;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px;
+}
+.customerSupport2 p:hover{ 
+    color: #ffffff; 
+}
+
+.copyRight{
+    margin-top: 20px;
+}
+.footerSocialMedias{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    justify-content: center;
+    padding: 2%;
+}
+.footerSocialMedias p{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.footerSocialMedias ul{
+    display: flex;
+    font-size: 1vw;
+    justify-content: right;
+    text-decoration: none;
+}
+.footerSocialMedias a{
+    padding: 0px 5px;
+}
+.footerSocialMedias ul li:hover{
+    color: #ff8f12;
+    transition: .5s;
+}
+.termsAndTarrifs p{
+    text-align: left;
+    margin: 7px;
+    font-size: 14px;
+    background-color: #e0e0e0;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+    color: #000000; 
+  }
+  .termsAndTarrifs p:hover{
+    /* transform: scale(1.05); */
+    background-color: #ff6b0b;
+    transition: transform 0.3s ease-in-out; 
+    color: #ffffff;
+  }
+
+
+
+@media screen and (max-width: 500px) {
+    .footer{
+        padding: 1% 2%;
+        justify-content: center;
+    }
+    .footerContents{
+        display: grid;
+        grid-template-columns: 50% 40% ;
+        column-gap: 10%;
+        justify-content: center;
+        margin-left: 50px;
+        
+    }
+
+    .contacts p{
+        font-size: 11px;
+        text-align: left;
+    }
+    
+    .usefulLinkd p{
+        cursor: pointer;
+        text-align: left;
+        font-size: 11px;
+    }
+
+
+    .customerSupport p{
+        text-align: left;
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    .customerSupport2 p{
+        text-align: left;
+        cursor: pointer;
+        font-size: 11px;
+    }
+
+    .footerSocialMedias p{
+        display: flex;
+        align-items: center;
+        font-size: 9px;
+    }
+}

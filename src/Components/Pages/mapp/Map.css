@@ -1,0 +1,9 @@
+.leaflet-container {
+    width:60pc;
+    height: calc(60vh);
+    background-color: #0058A3;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    z-index: 0;
+  }
+  

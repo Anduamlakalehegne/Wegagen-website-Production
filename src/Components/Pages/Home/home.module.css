@@ -1,0 +1,1222 @@
+.cards {
+  display: grid;
+  grid-template-columns: 27% 27% 27%;
+  justify-content: center;
+  column-gap: 3%;
+  padding: 2%;
+  margin-top: 80px;
+}
+
+.card1 {
+  flex: 1;
+  min-width: 28%;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card1:hover {
+  transform: translateY(-15px);
+}
+
+.card1 object {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  transform: rotate(-10deg);
+  transition: 0.5s;
+}
+
+.card1 object:hover {
+  transform: scale(1.2);
+}
+
+.card1 h6 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ff6b0b; 
+  margin: 35px 0 10px;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.card1 h6 span {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ff8f12;
+}
+
+.card1 p {
+  font-size: 15px;
+  color: rgb(97, 97, 97);
+  text-align: justify;
+  padding-left: 5%;
+  flex-grow: 1;
+}
+
+.readMore {
+  align-self: flex-start;
+  background-color: #ff8f12;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+.readMore:hover {
+  background-color: black;
+  color: aliceblue;
+}
+
+.leftImg {
+  background: url("../../../assets/Images/mobile.png") no-repeat center;
+  background-size: 100%;
+}
+
+.rightSide {
+  padding: 1% 1% 1% 6%;
+  text-align: justify; 
+}
+
+.stayConnected {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  justify-content: center;
+  padding: 0% 4% 0% 4%;
+  margin-bottom: 100px;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.leftImgMobile img {
+  background-size: 10%;
+}
+
+.Ebanking {
+  margin-bottom: 60px;
+}
+
+.headerTitle {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  color: #ff8f12;
+}
+.headerTitle3 {
+  font-size: 30px;
+  font-weight: 600;
+  /* display: flex; */
+  color: #ff8f12;
+  text-align: center;
+}
+
+.headerTitle2 {
+  font-size: 27px;
+  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  color: #004360;
+}
+
+.paragraph {
+  display: flex;
+  font-size: 18px;
+  color: rgb(77, 77, 77);
+  margin-top: 5px;
+  padding-bottom: 20px;
+}
+
+.playStore {
+  display: grid;
+  grid-template-columns: 27% 27%;
+  gap: 10%;
+  padding-bottom: 30px;
+}
+.Ebanking{
+  margin-top: 80px;
+}
+
+.Ebanking ul {
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  justify-content: center;
+  text-align: center;
+  /* margin-bottom: -50px; */
+}
+
+.Ebanking .active {
+  font-size: 1.4vw;
+  font-weight: 500;
+  border-bottom: 7px solid rgb(255, 149, 0);
+  color: #ff8f12;
+  cursor: pointer;
+  background-color: rgb(246, 246, 246);
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+.Ebanking .notActive {
+  font-size: 1.4vw;
+  font-weight: 500;
+  padding: 0% 5% 0% 5%;
+  padding-bottom: 1px;
+  border-bottom: 7px solid rgb(225, 225, 225);
+  color: #ff8f12;
+  cursor: pointer;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+.Ebanking ul li span {
+  color: #ff6b0b;
+  font-size: 1.4vw;
+  font-weight: 700;
+}
+
+/* ----------------------------- business ------------------------------- */
+.business {
+  display: grid;
+  grid-template-columns: 50% 42%;
+  gap: 4%;
+  padding: 0% 5% 0% 5%;
+  margin-top: 80px;
+}
+
+.rightImg img {
+  display: flex;
+  justify-content: center;
+  /* margin-left: 50px; */
+  background-size: 70%;
+}
+
+/* ----------------------------- exchange rate ------------------------------- */
+.exchangeRate {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  justify-content: center;
+  gap: 4%;
+  padding: 0% 5% 0% 5%;
+  margin-top: 80px;
+}
+
+.exchangeRateInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exchangeRate .rightSide{
+  text-align: center;
+}
+
+
+/* ----------------------------- correspondentBanks ------------------------------- */
+
+.correspondentBanks {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff6b0b;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.moneyTransferAgents  {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff6b0b;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.correspondentBanks span {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff8f12;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.moneyTransferAgents span {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff8f12;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.bankSlider img {
+  margin: auto;
+  width: 170px;
+  padding: 1px;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  background-color: rgb(246, 246, 246);
+  margin-bottom: 35px;
+}
+
+.serviceSlider{
+  width: 95%;
+  margin: auto;
+}
+
+.bankSlider{
+  width: 95%;
+  margin: auto;
+}
+
+.serviceSlider img {
+  margin: auto;
+  width: 230px;
+  padding: 1px;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  background-color: rgb(246, 246, 246);
+  margin-bottom: 35px;
+}
+
+/* ----------------------------- newsAndExchange ------------------------------- */
+.newsAndExchange {
+  padding: 5%;
+}
+
+.newsHeader {
+  font-size: 36px;
+  font-weight: 600;
+  color: #003460;
+  text-align: center;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 20px;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  justify-content: center;
+  gap: 3%;
+  margin-bottom: 70px;
+}
+
+.newsContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  box-shadow: 0px 0px 21px -2px rgba(0, 0, 0, 0.2);
+  padding: 3%;
+  margin-bottom: 20px;
+  height: 100%; 
+}
+
+.newsContent img {
+  width: 100%; /* Adjust image width */
+  height: 200px; /* Adjust image height */
+}
+
+.newsContent label {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: left;
+  padding-top: 1px;
+  color: #ff6b0b;
+  border-left: 3px solid #ff6b0b;
+  margin: 10px;
+  margin-left: 5px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.newsContent p {
+  text-align: left; 
+  font-size: 14px;
+  flex-grow: 1; /* Allows paragraph to grow and fill available space */
+  padding: 0 2% 2% 2%; /* Adjust padding to your preference */
+}
+
+.moreNews p{ 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 1% 2%; 
+  margin-top: auto; /* Pushes the Read More to the bottom */
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.moreNews p:hover {
+  color: #ff6b0b;
+}
+
+.seeAllNews {
+  background-color: #ff8f12;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: .5s;
+}
+.seeAllNews:hover{
+  transform: scale(1.1);
+  background-color: #ff6b0b;
+  color: #ffffff;
+}
+
+.seeAllNews p:hover {
+  color: #ff6b0b;
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  margin-bottom: 100px;
+}
+
+.leftImgs {
+  background: url("../../../assets/Images/mobile.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
+  background-color: red;
+}
+
+.newsImgs {
+  background: url("../../../assets/Images/news.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  background-color: red;
+}
+
+.exchange {
+  padding: 5%;
+}
+
+.exchangeHeader {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(255, 119, 0);
+  display: flex;
+  justify-content: last baseline;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.exchange table {
+  padding: 5%;
+  width: 100%;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+.exchange th {
+  justify-content: left;
+  text-align: left;
+  padding: 4%;
+  padding-left: 1%;
+  font-size: 19px;
+  color: #636363;
+  background-color: rgb(242, 242, 242);
+}
+
+.exchange td {
+  padding: 2%;
+  padding-left: 1%;
+  font-size: 17px;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.active {
+  background-color: rgb(242, 242, 242);
+}
+
+
+.productServicesTitle {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  color: rgb(2, 60, 104);
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.popImg {
+  display: grid;
+}
+
+.popImg img {
+  width: 60%;
+  margin: auto;
+  border-radius: 10px;
+  transform: rotate(0deg);
+  margin: auto;
+  padding-bottom: 20px;
+  transform: rotate(-7deg);
+  transition: 0.5s;
+  margin-top: 40px;
+}
+
+/* ----------------------- services ------------------------ */
+
+.allServices {
+  display: grid;
+  grid-template-columns: 28% 28% 28%;
+  justify-content: center;
+  column-gap: 5%;
+  padding: 0% 6% 0% 6%;
+}
+
+.services {
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 40px;
+  height: auto;
+}
+
+.arrowIcon {
+  font-size: 30px;
+  color: #acacac;
+}
+
+.services:hover {
+  transform: translate(0px, -15px);
+}
+
+.services label {
+  display: flex;
+  color: rgb(255, 89, 0);
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid rgb(255, 132, 0);
+  padding-bottom: 2%;
+  width: 100%;
+}
+
+.services label span {
+  display: flex;
+  /* justify-content: left; */
+  color: rgb(255, 132, 0);
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 7px;
+}
+
+.services p {
+  text-align: justify;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #4a4a4a;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+}
+
+.readMore2 {
+  position: absolute;
+  bottom: 0;
+}
+
+.readMore2 button {
+  background-color: #ff8f12;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: .5s;
+}
+
+.readMore2:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------------- */
+
+/* .popOuter {
+  display: grid;
+  justify-content: center;
+} */
+
+.popTitle {
+  font-size: 30px; 
+  font-weight: 700;
+  color: rgb(255, 123, 0);
+  margin-bottom: 10px;
+}
+
+.popOuter p {
+  font-size: 16px;
+  padding: 1px 5px;
+  text-align: justify;
+  /* margin-top: 100px; */
+}
+
+.popOuter h6 {
+  font-size: 16px;
+  padding: 10px;
+  padding-top: 1px;
+  text-align: justify;
+  /* margin-top: 15px; */
+}
+
+.map {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.map p {
+  font-size: 3vw;
+  margin-bottom: 10px;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  column-gap: 1%;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+  position: relative;
+  font-size: 13px;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  color: #003460;
+  margin: 5%;
+  font-size: 15px;
+}
+
+i {
+  color: #ff6b0b;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+span.num {
+  color: #003460;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 5px;
+}
+
+span.text {
+  color: #003460;
+  font-size: 1.1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+
+
+/* --------------------------- Exchange Rate ------------------------------ */
+
+
+.popTitleexchange {
+  font-size: 2vw;
+  font-weight: 700;
+  color: rgb(255, 123, 0);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 17px;
+  border-bottom: 2px solid rgb(255, 123, 0);
+}
+.popOuterexchange p {
+  font-size: 1.3vw; 
+  padding: 15px;
+}
+
+@keyframes scaleColorAnimation {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+      color: #ff6b0b;
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.animatedIcon {
+  animation: scaleColorAnimation 1.5s infinite;
+}
+
+/* styles.css */
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ----------------------------------- popup table ------------------------------------*/
+
+.popexchangeHeader {
+  font-size: 50px;
+  color: #ff6b0b;
+}
+
+.popexchange table {
+  /* padding: 3px; */
+  width: 100%;
+  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+}
+.popexchange th {
+  justify-content: left;
+  text-align: left;
+  padding: 1% 0% 1% 0%;
+  padding-left: 1%;
+  font-size: 15px;
+  color: #636363;
+  background-color: rgb(242, 242, 242);
+  /* width: 100px; */
+}
+
+.popexchange td {
+  padding: 5px;
+  font-size: 15px;
+  color: #3a3a3a;
+  text-align: left;
+}
+.active {
+  background-color: rgb(242, 242, 242);
+}
+
+
+/* --------------------------- Responsivness ------------------------------ */
+
+@media screen and (max-width: 1100px) {
+  .headerTitle {
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerTitle2 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .headerTitle {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerTitle2 {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) { 
+
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 15%;
+    margin-top: 80px;
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+  .card1 p {
+    text-align: justify;
+  }
+
+  .stayConnected {
+    display: grid;
+    grid-template-columns: 95%;
+    margin-top: 10px;
+  }
+
+  .playStore {
+    display: grid;
+    grid-template-columns: 22% 22%;
+    gap: 10%;
+    justify-content: center;
+    margin-top: 4px;
+    padding-bottom: 30px;
+  }
+
+  .paragraph {
+    padding-bottom: 30px;
+    text-align: justify;
+  }
+
+  .leftImg {
+    background: url("../../../assets/Images/mobile.png") no-repeat center;
+    background-size: 100%;
+    height: 280px;
+  }
+
+  .business {
+    display: grid;
+    grid-template-columns: 95%;
+  }
+
+  .exchangeRate {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+  /* ----------------------------------- popup table ------------------------------------*/
+
+.popexchangeHeader {
+  font-size: 50px;
+  color: #ff6b0b;
+}
+
+.popexchange table {
+  /* padding: 3px; */
+  /* width: 100%; */
+  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+}
+.popexchange th {
+  justify-content: left;
+  text-align: left;
+  padding: 0.5% 0% 0.5% 0%;
+  font-size: 11px;
+  color: #636363;
+  background-color: rgb(242, 242, 242);
+  /* width: 100px; */
+}
+
+.popexchange td {
+  padding: 3px;
+  font-size: 10px;
+  color: #3a3a3a;
+  text-align: left;
+}
+.active {
+  background-color: rgb(242, 242, 242);
+}
+
+  .rightImg {
+    display: none;
+  }
+
+  .Ebanking ul {
+    margin-bottom: -60px;
+  }
+
+  .Ebanking {
+    margin-bottom: 50px;
+  }
+
+  .news {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    gap: 5%;
+    margin-bottom: 150px;
+  }
+
+  .newsAndExchange {
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 3%;
+    justify-content: center;
+    /* margin-bottom: 100px; */
+  }
+
+  .allServices {
+    display: grid;
+    grid-template-columns: 40% 40%;
+  }
+
+  .popImg {
+    display: grid;
+    margin: 0px;
+  }
+
+  .popImg img {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    border-radius: 10px;
+    transform: rotate(0deg);
+    margin-bottom: -20px;
+    margin-top: 0px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 10%;
+    justify-content: center;
+    background-color: #e0e0e0;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .container {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+    color: #003460;
+    font-size: 14px;
+    /* margin: 5%; */
+  }
+
+  i {
+    font-size: 2.5em;
+  }
+
+  span.num {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 768px) {
+
+  .productServicesTitle {
+    font-size: 30px;
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .Ebanking .active {
+    font-size: 2.2vw;
+  }
+
+  .Ebanking .notActive {
+    font-size: 2.2vw;
+  }
+
+  .Ebanking ul li span {
+    color: rgb(255, 102, 0);
+    font-size: 2.2vw;
+  }
+
+  .headerTitle {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerTitle2 {
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 10%;
+    margin-top: 80px;
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+
+  .card1 object {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+  .Ebanking .active {
+    font-size: 3vw;
+  }
+
+  .Ebanking .notActive {
+    font-size: 3vw;
+  }
+
+  .Ebanking ul li span {
+    color: rgb(255, 102, 0);
+    font-size: 3vw;
+  }
+  .correspondentBanks  {
+    font-size: 25px;
+  }
+  .correspondentBanks span {
+    font-size: 25px;
+  }
+
+  .allServices {
+    display: grid;
+    grid-template-columns: 90%;
+    /* margin-bottom: 180px; */
+  }
+
+
+  .news {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 400px;
+  }
+
+  .newsHeader{
+    font-size: 25px;
+  }
+
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 10%;
+    justify-content: center;
+    background-color: #e0e0e0;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .container {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+    color: #003460;
+    font-size: 14px;
+    /* margin: 5%; */
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .cards {
+    display: grid;
+    grid-template-columns: 90%;
+    padding: 10%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .card1{
+    margin-bottom: 50px;
+  }
+
+
+  .card1 object {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2px;
+    transform: rotate(-10deg);
+    transition: 0.5s;
+  }
+
+  .business {
+    margin-top: 50px;
+  }
+
+
+  .stayConnected {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Ebanking .active {
+    font-size: 3.3vw;
+  }
+
+  .Ebanking .notActive {
+    font-size: 3.3vw;
+  }
+
+  .Ebanking ul li span {
+    color: rgb(255, 102, 0);
+    font-size: 3.3vw;
+  }
+
+  .paragraph {
+    font-size: 3vw;
+  }
+  .Ebanking{
+    margin-bottom: 10px;
+  }
+
+  .Ebanking ul {
+    margin-bottom: -50px;
+  }
+
+  .readMore {
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .headerTitle {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .headerTitle2 {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .productServicesTitle {
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    color: rgb(2, 60, 104);
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 80%;
+  }
+  .productService{
+    margin-top: 10px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 80%;
+    column-gap: 10%;
+    justify-content: center;
+    background-color: #e0e0e0; 
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+}
+
+
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.closeButton {
+  background-color: #3085d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* styles.module.css */
+.customSwalShow {
+  animation-duration: 0.1s;
+}
+.customSwalHide {
+  animation-duration: 0.1s; 
+}
+
+/* AnimationStyles.module.css */
+.customAnimationDuration {
+  animation-duration: .1s;
+}
+
+

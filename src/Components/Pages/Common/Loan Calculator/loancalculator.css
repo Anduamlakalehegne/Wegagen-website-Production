@@ -1,0 +1,111 @@
+.loan-calculator {
+  margin: auto;
+  padding: 0px 20px;
+  font-family: Arial, sans-serif;
+  z-index: 106;
+
+}
+
+.loan-calculator h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.loan-calculator label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.loan-calculator input[type="number"],
+.loan-calculator select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.loan-calculator button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.loan-calculator button:hover {
+  background-color: #0056b3;
+}
+
+.loan-calculator p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+/* Style for clear button */
+.loan-calculator .clear-btn {
+  background-color: #f44336;
+}
+
+.loan-calculator .clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+
+.loan-calculator-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 106;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 300;
+  width: 500px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6c757d;
+  /* width: 100%; */
+}
+
+.close-btn:hover {
+  color: #000;
+}
+.calculatioResult{
+  background-color: #004360;
+  color: #ebebeb;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .popup-content {
+    max-width: 95%;
+  }
+}

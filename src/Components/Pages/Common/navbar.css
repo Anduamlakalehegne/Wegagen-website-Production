@@ -1,0 +1,108 @@
+ /* ------------------------- navigation -------------------------- */
+.navigation {
+  display: grid;
+  grid-template-columns: 70% 25%;
+  gap: 3%;
+  align-items: center;
+  color: #000000;
+  position: sticky;
+  top: -1px;
+  z-index: 5;
+  padding-left: 50px;
+  border-bottom: 5px solid rgb(255, 111, 0);
+  background-color: white;
+}
+
+.navigation.scrolled {
+  /* background-color: #004360; */
+  background-color: white;
+  color: #585858;
+}
+
+.navigationContents {
+  display: flex;
+  /* justify-content: center; */
+  /* align-content: center; */
+  font-size: 1.2vw;
+}
+
+.navigationContents ul {
+  display: flex;
+  font-weight: 550;
+  margin: 15px;
+}
+
+.navigationContents ul li {
+  margin: 15px;
+}
+
+.navigationContents ul li:hover {
+  color: rgb(255, 111, 0);
+  cursor: pointer;
+}
+
+/* styles for hover state */
+.my-hover-class {
+  background-color: #ccc;
+  color: rgb(70, 61, 185);
+}
+
+.rs-nav-item-active {
+  background-color: red;
+  color: white;
+}
+
+.my-active-class {
+  background-color: #aaa;
+  color: rgb(184, 25, 25);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: left; 
+  background: url("../../../assets/Images/Logo.svg") no-repeat center;
+  background-size: 80%;
+  padding-left: 50%;
+}
+
+.navbarWhat { 
+  background-color: white;
+  color: #565656;
+}
+
+.navbarWhat.scrolled { 
+  background-color: white;
+  color: #565656;
+}
+
+
+@media screen and (max-width: 900px) {
+  .socialMedias ul li {
+    transition: 0.3s;
+    font-size: 2.5vw;
+  }
+
+  .navigationContents {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1.5vw;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+
+  .vacancy {
+    display: none;
+  }
+
+  .socialMedias {
+    display: none;
+  }
+}
+
