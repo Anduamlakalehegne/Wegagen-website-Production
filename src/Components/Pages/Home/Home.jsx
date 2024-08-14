@@ -368,7 +368,7 @@ export default function Home() {
         <div className={styles.cards}>
           <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1} >
             <label><object data={card1} alt="" /></label>
-            <h6>Agar <span>Cardsss</span></h6>
+            <h6>Agar <span>Cardsssssss</span></h6>
             <p>With our Agar debit card, you have the access to the money in your account
               wherever you are and whenever you want. Using your Agar card is quicker than making
               a trip to the bank and safer than carrying money.</p>
