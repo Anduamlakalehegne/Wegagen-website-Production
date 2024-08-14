@@ -24,6 +24,7 @@
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "caniuse-lite": "^1.0.30001651",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.0.25",
     "ldrs": "^1.0.1",
@@ -51,7 +52,7 @@
     "semantic-ui-react": "^2.1.4",
     "styled-components": "^6.1.8",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.7.3",
+    "sweetalert2": "^11.6.13",
     "sweetalert2-react-content": "^5.0.7",
     "swiper": "^9.3.2",
     "wowjs": "^1.1.3"
