@@ -840,7 +840,7 @@ export default function Home() {
                 {/* <div style={{ fontSize: "15px" }}> */}
                 {counterOn && <CountUp
                   start={0}
-                  end={388}
+                  end={385}
                   duration={6}
                 />}+
                 {/* </div> */}
@@ -855,8 +855,8 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterON(true)} onExit={() => setCounterON(false)}>
                 {counterOn && <CountUp
                   start={0}
-                  end={4821}
-                  duration={7}
+                  end={4800} 
+                  duration={7} 
                 />}+
               </ScrollTrigger>
             </span>
@@ -869,7 +869,7 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterON(true)} onExit={() => setCounterON(false)}>
                 {counterOn && <CountUp
                   start={0}
-                  end={436}
+                  end={430}
                   duration={8}
                 />}+
               </ScrollTrigger>

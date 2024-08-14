@@ -761,7 +761,7 @@ function Mega_Menu({ path, headerSelect }) {
                                                         <div className='popupContent animate__animated animate__zoomIn'>
                                                             <label>About Wegagen Bank</label>
                                                             <p style={{ paddingTop: '7px', margin: '0px', textAlign: 'justify', fontSize: "15px" }}>
-                                                                Established on June 11, 1996, Wegagen Bank S.C. emerged from the visionary mindset of sixteen
+                                                                Established on November, 1996, Wegagen Bank S.C. emerged from the visionary mindset of sixteen
                                                                 founding members who recognized the pivotal role financial institutions would play in fostering
                                                                 sustained economic development.
                                                             </p>

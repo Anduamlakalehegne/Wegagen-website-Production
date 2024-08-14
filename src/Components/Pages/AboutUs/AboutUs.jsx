@@ -141,7 +141,7 @@ export default function AboutUs() {
                     </div>
                 </div>
             ),
-            showCloseButton: true,
+            showCloseButton: true, 
             showConfirmButton: false,
             focusConfirm: false,
             width: '900px', // Adjusting width to accommodate side by side layout
