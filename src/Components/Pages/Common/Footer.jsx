@@ -37,7 +37,7 @@ export default function Footer({ footerColor }) {
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={Credit_Terms_And_Tariffs}> Credit Terms and Tariffs </p>
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={International_Terms_And_Tariffs}> IBD Terms and Tariffs </p>
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={IFB_Terms_And_Tariffs}> IFB Tariffs </p>
-            {/* <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={Interest_Rate}> Interest Rates of Credit Products </p> */}
+            <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={Efoyta_Terms_And_Tariffs}> Efoyta Terms And Tariffs </p>
           </>
         </div>
       ),
@@ -80,10 +80,10 @@ export default function Footer({ footerColor }) {
     MySwal.close()
     navigate('/IFB_Terms_And_Tariffs')
   }
-  // const Interest_Rate = () => {
-  //   MySwal.close()
-  //   navigate('/Interest_Rate')
-  // }
+  const Efoyta_Terms_And_Tariffs = () => {
+    MySwal.close()
+    navigate('/Efoyta_Terms_And_Tariffs')
+  }
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => {
     setShowPopup(!showPopup);

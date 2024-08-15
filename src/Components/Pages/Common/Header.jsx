@@ -80,18 +80,18 @@ function Header({ path }) {
         }).then((result) => { if (result.isDenied) { } });
     };
 
-    const navigate = useNavigate();
-    const MySwal = withReactContent(Swal);
+    const navigate = useNavigate(); 
+    const MySwal = withReactContent(Swal); 
 
-    const navigateToATMLocator = () => {
-        MySwal.close();
-        navigate('/ATM_Location');
-    };
-
+    const navigateToATMLocator = () => { 
+        MySwal.close(); 
+        navigate('/ATM_Location'); 
+    }; 
+ 
     const navigateToBranchLocator = () => {
-        MySwal.close();
+        MySwal.close(); 
         navigate('/Branch_Location');
-    };
+    }; 
 
     const cardstoggle2 = () => {
 
