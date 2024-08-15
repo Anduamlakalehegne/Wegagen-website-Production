@@ -387,7 +387,7 @@ export default function Home() {
 
           <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
             <label><object data={card3} alt="" /></label>
-            <h6>Amana <span>Carddddd </span></h6>
+            <h6>Amana <span>Cardd </span></h6>
             <p>Amana is a specialized card for our Interest Free Banking Customers. The card is linked to customer’s
               account and you can induldge with the convenience of accessing your account anytime anywhere.</p>
             <button className={styles.readMore} onClick={() => { cardstoggle3() }}>Read More</button>
