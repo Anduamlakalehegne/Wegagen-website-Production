@@ -365,7 +365,6 @@ export default function Home() {
 
       <>
 
-
         <div className={styles.cards}>
           <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1} >
             <label><object data={card1} alt="" /></label>
