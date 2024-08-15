@@ -506,7 +506,7 @@ export default function AboutUs() {
                   Established on November 1996, Wegagen Bank S.C. emerged from
                   the visionary mindset of sixteen founding members who
                   recognized the pivotal role financial institutions would play
-                  in fosteeeering sustained economic development.
+                  in fostering sustained economic development.
                 </p>
                 <p style={{ marginBottom: "15px" }}>
                   With an initial paid-in capital of Birr 30 million, the bank
