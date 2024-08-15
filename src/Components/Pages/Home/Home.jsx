@@ -368,7 +368,7 @@ export default function Home() {
         <div className={styles.cards}>
           <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1} >
             <label><object data={card1} alt="" /></label>
-            <h6>Agarrr <span>Cardssss</span></h6>
+            <h6>Agar <span>Card</span></h6>
             <p>With our Agar debit card, you have the access to the money in your account
               wherever you are and whenever you want. Using your Agar card is quicker than making
               a trip to the bank and safer than carrying money.</p>
@@ -387,7 +387,7 @@ export default function Home() {
 
           <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
             <label><object data={card3} alt="" /></label>
-            <h6>Amana <span>Card </span></h6>
+            <h6>Amana <span>Carddd </span></h6>
             <p>Amana is a specialized card for our Interest Free Banking Customers. The card is linked to customer’s
               account and you can induldge with the convenience of accessing your account anytime anywhere.</p>
             <button className={styles.readMore} onClick={() => { cardstoggle3() }}>Read More</button>
