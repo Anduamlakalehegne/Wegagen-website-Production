@@ -37,7 +37,7 @@
 .card1 h6 {
   font-size: 23px;
   font-weight: 600;
-  color: #ff6b0b; 
+  color: #ff6b0b;
   margin: 35px 0 10px;
   text-align: left;
   padding-left: 5%;
@@ -79,7 +79,7 @@
 
 .rightSide {
   padding: 1% 1% 1% 6%;
-  text-align: justify; 
+  text-align: justify;
 }
 
 .stayConnected {
@@ -136,7 +136,7 @@
   gap: 10%;
   padding-bottom: 30px;
 }
-.Ebanking{
+.Ebanking {
   margin-top: 80px;
 }
 
@@ -205,16 +205,23 @@
   margin-top: 80px;
 }
 
-.exchangeRateInfo{
+.exchangeRateHistory {
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+  padding: 0% 5% 0% 5%;
+  margin-top: 100px;
+}
+
+.exchangeRateInfo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.exchangeRate .rightSide{
+.exchangeRate .rightSide {
   text-align: center;
 }
-
 
 /* ----------------------------- correspondentBanks ------------------------------- */
 
@@ -228,8 +235,7 @@
   margin-bottom: 10px;
 }
 
-
-.moneyTransferAgents  {
+.moneyTransferAgents {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
@@ -271,12 +277,12 @@
   margin-bottom: 35px;
 }
 
-.serviceSlider{
+.serviceSlider {
   width: 95%;
   margin: auto;
 }
 
-.bankSlider{
+.bankSlider {
   width: 95%;
   margin: auto;
 }
@@ -319,11 +325,11 @@
 .newsContent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   box-shadow: 0px 0px 21px -2px rgba(0, 0, 0, 0.2);
   padding: 3%;
   margin-bottom: 20px;
-  height: 100%; 
+  height: 100%;
 }
 
 .newsContent img {
@@ -346,17 +352,17 @@
 }
 
 .newsContent p {
-  text-align: left; 
+  text-align: left;
   font-size: 14px;
   flex-grow: 1; /* Allows paragraph to grow and fill available space */
   padding: 0 2% 2% 2%; /* Adjust padding to your preference */
 }
 
-.moreNews p{ 
-  display: flex; 
-  align-items: center; 
-  justify-content: flex-start; 
-  padding: 1% 2%; 
+.moreNews p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1% 2%;
   margin-top: auto; /* Pushes the Read More to the bottom */
   cursor: pointer;
   font-size: 15px;
@@ -372,9 +378,9 @@
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 16px;
-  transition: .5s;
+  transition: 0.5s;
 }
-.seeAllNews:hover{
+.seeAllNews:hover {
   transform: scale(1.1);
   background-color: #ff6b0b;
   color: #ffffff;
@@ -449,7 +455,6 @@
 .active {
   background-color: rgb(242, 242, 242);
 }
-
 
 .productServicesTitle {
   font-size: 32px;
@@ -541,7 +546,7 @@
   color: white;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .readMore2:hover {
@@ -556,7 +561,7 @@
 } */
 
 .popTitle {
-  font-size: 30px; 
+  font-size: 30px;
   font-weight: 700;
   color: rgb(255, 123, 0);
   margin-bottom: 10px;
@@ -587,7 +592,6 @@
   font-size: 3vw;
   margin-bottom: 10px;
 }
-
 
 .wrapper {
   display: grid;
@@ -642,9 +646,7 @@ span.text {
   margin-bottom: 5px;
 }
 
-
 /* --------------------------- Exchange Rate ------------------------------ */
-
 
 .popTitleexchange {
   font-size: 2vw;
@@ -656,20 +658,20 @@ span.text {
   border-bottom: 2px solid rgb(255, 123, 0);
 }
 .popOuterexchange p {
-  font-size: 1.3vw; 
+  font-size: 1.3vw;
   padding: 15px;
 }
 
 @keyframes scaleColorAnimation {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(1.5);
-      color: #ff6b0b;
+    transform: scale(1.5);
+    color: #ff6b0b;
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -722,7 +724,6 @@ span.text {
   background-color: rgb(242, 242, 242);
 }
 
-
 /* --------------------------- Responsivness ------------------------------ */
 
 @media screen and (max-width: 1100px) {
@@ -757,15 +758,13 @@ span.text {
   }
 }
 
-@media screen and (max-width: 900px) { 
-
+@media screen and (max-width: 900px) {
   .cards {
     display: grid;
     grid-template-columns: 90%;
     padding: 15%;
     margin-top: 80px;
   }
-
 
   .card1 object {
     width: 90%;
@@ -817,35 +816,35 @@ span.text {
   }
   /* ----------------------------------- popup table ------------------------------------*/
 
-.popexchangeHeader {
-  font-size: 50px;
-  color: #ff6b0b;
-}
+  .popexchangeHeader {
+    font-size: 50px;
+    color: #ff6b0b;
+  }
 
-.popexchange table {
-  /* padding: 3px; */
-  /* width: 100%; */
-  box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
-}
-.popexchange th {
-  justify-content: left;
-  text-align: left;
-  padding: 0.5% 0% 0.5% 0%;
-  font-size: 11px;
-  color: #636363;
-  background-color: rgb(242, 242, 242);
-  /* width: 100px; */
-}
+  .popexchange table {
+    /* padding: 3px; */
+    /* width: 100%; */
+    box-shadow: 1px 1px 6px -1px rgba(0, 0, 0, 0.6);
+  }
+  .popexchange th {
+    justify-content: left;
+    text-align: left;
+    padding: 0.5% 0% 0.5% 0%;
+    font-size: 11px;
+    color: #636363;
+    background-color: rgb(242, 242, 242);
+    /* width: 100px; */
+  }
 
-.popexchange td {
-  padding: 3px;
-  font-size: 10px;
-  color: #3a3a3a;
-  text-align: left;
-}
-.active {
-  background-color: rgb(242, 242, 242);
-}
+  .popexchange td {
+    padding: 3px;
+    font-size: 10px;
+    color: #3a3a3a;
+    text-align: left;
+  }
+  .active {
+    background-color: rgb(242, 242, 242);
+  }
 
   .rightImg {
     display: none;
@@ -906,7 +905,7 @@ span.text {
     margin-bottom: 100px;
     margin-top: 50px;
   }
-  
+
   .container {
     /* width: 100%; */
     display: flex;
@@ -931,15 +930,12 @@ span.text {
   }
 }
 @media (max-width: 768px) {
-
   .productServicesTitle {
     font-size: 30px;
-
   }
 }
 
 @media screen and (max-width: 700px) {
-
   .Ebanking .active {
     font-size: 2.2vw;
   }
@@ -978,7 +974,6 @@ span.text {
     margin-top: 80px;
   }
 
-
   .card1 object {
     width: 90%;
     margin: auto;
@@ -986,7 +981,6 @@ span.text {
     transform: rotate(-10deg);
     transition: 0.5s;
   }
-
 
   .card1 object {
     width: 70%;
@@ -1008,7 +1002,7 @@ span.text {
     color: rgb(255, 102, 0);
     font-size: 3vw;
   }
-  .correspondentBanks  {
+  .correspondentBanks {
     font-size: 25px;
   }
   .correspondentBanks span {
@@ -1021,7 +1015,6 @@ span.text {
     /* margin-bottom: 180px; */
   }
 
-
   .news {
     display: grid;
     grid-template-columns: 100%;
@@ -1030,11 +1023,9 @@ span.text {
     margin-bottom: 400px;
   }
 
-  .newsHeader{
+  .newsHeader {
     font-size: 25px;
   }
-
-
 
   .wrapper {
     display: grid;
@@ -1047,7 +1038,7 @@ span.text {
     margin-bottom: 100px;
     margin-top: 50px;
   }
-  
+
   .container {
     /* width: 100%; */
     display: flex;
@@ -1062,11 +1053,9 @@ span.text {
     font-size: 14px;
     /* margin: 5%; */
   }
-
 }
 
 @media screen and (max-width: 500px) {
-
   .cards {
     display: grid;
     grid-template-columns: 90%;
@@ -1074,10 +1063,9 @@ span.text {
     margin-top: 50px;
     margin-bottom: 10px;
   }
-  .card1{
+  .card1 {
     margin-bottom: 50px;
   }
-
 
   .card1 object {
     width: 90%;
@@ -1090,7 +1078,6 @@ span.text {
   .business {
     margin-top: 50px;
   }
-
 
   .stayConnected {
     margin-top: 10px;
@@ -1113,7 +1100,7 @@ span.text {
   .paragraph {
     font-size: 3vw;
   }
-  .Ebanking{
+  .Ebanking {
     margin-bottom: 10px;
   }
 
@@ -1149,7 +1136,7 @@ span.text {
     margin-top: 50px;
     width: 80%;
   }
-  .productService{
+  .productService {
     margin-top: 10px;
   }
   .wrapper {
@@ -1157,7 +1144,7 @@ span.text {
     grid-template-columns: 80%;
     column-gap: 10%;
     justify-content: center;
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0;
     width: 80%;
     margin: auto;
     margin-bottom: 100px;
@@ -1165,12 +1152,8 @@ span.text {
   }
 }
 
-
-
 @media (max-width: 480px) {
 }
-
-
 
 .popupOverlay {
   position: fixed;
@@ -1211,12 +1194,10 @@ span.text {
   animation-duration: 0.1s;
 }
 .customSwalHide {
-  animation-duration: 0.1s; 
+  animation-duration: 0.1s;
 }
 
 /* AnimationStyles.module.css */
 .customAnimationDuration {
-  animation-duration: .1s;
+  animation-duration: 0.1s;
 }
-
-
