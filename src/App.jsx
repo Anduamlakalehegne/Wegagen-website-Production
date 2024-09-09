@@ -51,6 +51,7 @@ import Bid from './Components/Pages/Bid/Bid';
 import Notification from './Components/Pages/Notification/Notification';
 import BankFormat from './Components/Pages/News/BankFormats';
 import Efoyta_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Efoyta_Terms_And_Tariffs';
+import EnvironmentalPolicy from './Components/Pages/News/EnvironmentalPolicy';
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 
@@ -112,6 +113,7 @@ function App() {
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Interest_Rate" element={<Interest_Rate />} />
           <Route path="/NewsLetter" element={<NewsLetter />} />
+          <Route path="/environmentalPolicy" element={<EnvironmentalPolicy />} />
           <Route path="/ATM_Location" element={<ATM_Location />} />
           <Route path="/Branch_Location" element={<Branch_Location />} />
           <Route path="/Vacancy" element={<Vacancy />} />

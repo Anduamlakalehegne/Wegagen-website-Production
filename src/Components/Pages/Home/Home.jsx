@@ -69,11 +69,30 @@ import { format, parseISO } from 'date-fns';
 import axios from "axios";
 import { API_BASE_URL } from '../Common/Config/Config'; // Import the base URL
 import LazyLoad from 'react-lazyload';
+import { scroller } from 'react-scroll';
 
 spiral.register()
 
 
 export default function Home() {
+
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Remove the '#' from the hash
+      const elementId = location.hash.substring(1);
+
+      // Use react-scroll to smoothly scroll to the element with the offset
+      scroller.scrollTo(elementId, {
+        duration: 800, // Time for scroll animation (milliseconds)
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        offset: -220, // Adjust this to leave some space at the top (e.g., for fixed header)
+      });
+    }
+  }, [location]);
 
   // useEffect(() => {
   //   AOS.init();
@@ -365,8 +384,8 @@ export default function Home() {
 
       <>
 
-        <div className={styles.cards}>
-          <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1} >
+        <div className={styles.cards} >
+          <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1}  >
             <label><object data={card1} alt="" /></label>
             <h6>Agar <span>Card</span></h6>
             <p>With our Agar debit card, you have the access to the money in your account
@@ -385,9 +404,9 @@ export default function Home() {
             <button className={styles.readMore} onClick={() => { cardstoggle2() }}>Read More</button>
           </div>
 
-          <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
+          <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100" >
             <label><object data={card3} alt="" /></label>
-            <h6>Amana <span>Card </span></h6>
+            <h6>Amana <span>Card </span></h6> 
             <p>Amana is a specialized card for our Interest Free Banking Customers. The card is linked to customer’s
               account and you can induldge with the convenience of accessing your account anytime anywhere.</p>
             <button className={styles.readMore} onClick={() => { cardstoggle3() }}>Read More</button>
@@ -396,13 +415,13 @@ export default function Home() {
       </>
 
 
-      <div style={{ marginBottom: "100px" }}>
+      <div  style={{ marginBottom: "100px" }}  id="exchange-rate">
 
-        <div className={styles.exchangeRate}>
+        <div className={styles.exchangeRate} >
           <div className={styles.exchangeRateInfo}>
             <div className={styles.rightSide}>
               <p className={styles.headerTitle3}>Exchange Rate</p>
-              <p className={styles.headerTitle2}>የዕለቱ የዉጭ ምንዛሬ ተመን</p>
+              <p className={styles.headerTitle2}>የዕለቱ የውጭ ምንዛሬ ተመን</p>
               <p style={{ color: "#ff6b0b", fontSize: '17px' }}>Foreign Exchange Rate Applicable</p>
               <p style={{ color: "#ff6b0b", fontSize: '17px' }}>On {formattedDate2}</p>
             </div>
@@ -432,7 +451,7 @@ export default function Home() {
                       <th>Selling</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody >
                     {rates.map((rate, index) => (
                       <tr key={rate.id} className={index % 2 === 1 ? styles.active : ''}>
                         <td><img src={`https://weg.back.strapi.wegagen.com${rate.attributes.flag.data[0].attributes.url}`} alt={rate.attributes.code} /></td>

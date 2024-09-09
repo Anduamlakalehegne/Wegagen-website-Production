@@ -1227,6 +1227,10 @@ function Mega_Menu({ path, headerSelect }) {
                                                         <Link to="/Gallery" style={{ textDecoration: 'none' }}><p onMouseOver={() => { setShowContent(4) }} style={showContent == 4 ? { color: getColor() } : { color: getColor2(), display: 'flex' }}> Gallery </p></Link>
                                                         <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
                                                     </div>
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+                                                        <p onMouseOver={() => { setShowContent(5) }} style={showContent == 5 ? { color: getColor() } : { color: getColor2(), display: 'flex' }}> Downloadables </p>
+                                                        <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
+                                                    </div>
                                                 </div>
 
                                                 <div>
@@ -1240,6 +1244,19 @@ function Mega_Menu({ path, headerSelect }) {
                                                                 <Link to='/NewsLetter' style={{ textDecoration: 'none' }}><p> News Letter </p></Link>
                                                                 <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
                                                             </div>
+                                                        </div>
+                                                        : ""}
+                                               
+                                                    {showContent === 5 ?
+                                                        <div className="aboutusNavItems animate__animated animate__zoomIn">
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+                                                                <Link to='/environmentalPolicy' style={{ textDecoration: 'none' }}><p> Environmental, SOCIAL AND Governance POLICY </p></Link>
+                                                                <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
+                                                            </div>
+                                                            {/* <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+                                                                <Link to='/NewsLetter' style={{ textDecoration: 'none' }}><p> News Letter </p></Link>
+                                                                <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
+                                                            </div> */}
                                                         </div>
                                                         : ""}
                                                 </div>
