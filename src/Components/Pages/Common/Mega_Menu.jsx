@@ -453,9 +453,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
 
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["aboutUs"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["aboutUs"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -468,18 +467,16 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["aboutUs"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["aboutUs"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <a href="/aboutUs" style={{ color: "#004360" }}>
                   About Wegagen Bank
                 </a>
                 {/* <a onClick={handleClick2}>Coprative Governance</a> */}
                 <div
-                  className={`submenu ${
-                    activeMenu["aboutUs"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu ${activeMenu["aboutUs"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ borderLeft: "0px solid black" }}
                 >
                   <div
@@ -495,9 +492,8 @@ function Mega_Menu({ path, headerSelect }) {
                       <p>Corporate Governance</p>
                     </span>
                     <span
-                      className={`dropdown-icon ${
-                        activeMenu["Governance"] ? "rotated" : ""
-                      }`}
+                      className={`dropdown-icon ${activeMenu["Governance"] ? "rotated" : ""
+                        }`}
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -510,9 +506,8 @@ function Mega_Menu({ path, headerSelect }) {
                     </span>
                   </div>
                   <div
-                    className={`submenu2 ${
-                      activeMenu["Governance"] ? "expanded" : "collapsed"
-                    }`}
+                    className={`submenu2 ${activeMenu["Governance"] ? "expanded" : "collapsed"
+                      }`}
                     style={{ marginLeft: "5px", fontSize: "13px" }}
                   >
                     <a onClick={handleClick1}>Board of Directors</a>
@@ -539,9 +534,8 @@ function Mega_Menu({ path, headerSelect }) {
                   <p>Banking Services</p>
                 </span>
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["BankingServices"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["BankingServices"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -554,9 +548,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["BankingServices"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["BankingServices"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -567,9 +560,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Personal Banking</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["PersonalBanking"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["PersonalBanking"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -582,9 +574,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["PersonalBanking"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["PersonalBanking"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "5px", fontSize: "13px" }}
                 >
                   <a onClick={bankingService}>Local currency saving accounts</a>
@@ -595,9 +586,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </div>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["BankingServices"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["BankingServices"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -608,9 +598,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Loan Facilities</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["LoanFacilities"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["LoanFacilities"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -623,9 +612,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["LoanFacilities"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["LoanFacilities"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "5px", fontSize: "13px" }}
                 >
                   <a href="/loanFacilities">General eligibility Criteria</a>
@@ -643,9 +631,8 @@ function Mega_Menu({ path, headerSelect }) {
               </div>
 
               <div
-                className={`submenu ${
-                  activeMenu["BankingServices"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["BankingServices"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -656,9 +643,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>International Banking</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["InternationalBanking"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["InternationalBanking"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -671,11 +657,10 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["InternationalBanking"]
+                  className={`submenu2 ${activeMenu["InternationalBanking"]
                       ? "expanded"
                       : "collapsed"
-                  }`}
+                    }`}
                   style={{ marginLeft: "5px", fontSize: "13px" }}
                 >
                   <a onClick={international_Banking}>Letter of Credit</a>
@@ -700,9 +685,8 @@ function Mega_Menu({ path, headerSelect }) {
                   <p>Digital Banking</p>
                 </span>
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["DigitalBanking"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["DigitalBanking"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -715,9 +699,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["DigitalBanking"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["DigitalBanking"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <a href="/CardBanking">Card Banking</a>
                 <a href="/MobileBanking">Mobile Banking</a>
@@ -737,9 +720,8 @@ function Mega_Menu({ path, headerSelect }) {
                   <p>Interest Free</p>
                 </span>
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["InterestFree"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["InterestFree"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -752,9 +734,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["InterestFree"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["InterestFree"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -765,9 +746,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Saving Account</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["SavingAccount"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["SavingAccount"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -780,9 +760,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["SavingAccount"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["SavingAccount"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "12px", fontSize: "13px" }}
                 >
                   <a onClick={interest_free}>Wadia Amana Account</a>
@@ -793,9 +772,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </div>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["InterestFree"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["InterestFree"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -806,9 +784,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Financing</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["Financing"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["Financing"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -821,9 +798,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["Financing"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["Financing"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "12px", fontSize: "13px" }}
                 >
                   <a onClick={financing1}>Murabaha</a>
@@ -832,9 +808,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </div>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["InterestFree"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["InterestFree"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <div
                   className="sidebar-link2"
@@ -845,9 +820,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Kafalah (Guarantee)</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["Kaffala"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["Kaffala"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -860,9 +834,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["Kaffala"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["Kaffala"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "12px", fontSize: "13px" }}
                 >
                   <a href="/Guarantee_Kafalah">Bid Bond</a>
@@ -884,9 +857,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
 
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["Medias"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["Medias"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -899,9 +871,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["Medias"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["Medias"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <a href="/News">News</a>
                 {/* <a href="/aboutUs">Publications</a> */}
@@ -914,9 +885,8 @@ function Mega_Menu({ path, headerSelect }) {
                     <p>Publications</p>
                   </span>
                   <span
-                    className={`dropdown-icon ${
-                      activeMenu["Publications"] ? "rotated" : ""
-                    }`}
+                    className={`dropdown-icon ${activeMenu["Publications"] ? "rotated" : ""
+                      }`}
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -929,9 +899,8 @@ function Mega_Menu({ path, headerSelect }) {
                   </span>
                 </div>
                 <div
-                  className={`submenu2 ${
-                    activeMenu["Publications"] ? "expanded" : "collapsed"
-                  }`}
+                  className={`submenu2 ${activeMenu["Publications"] ? "expanded" : "collapsed"
+                    }`}
                   style={{ marginLeft: "12px", fontSize: "13px" }}
                 >
                   <a href="/annualReport">Annual Report</a>
@@ -952,9 +921,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
 
                 <span
-                  className={`dropdown-icon ${
-                    activeMenu["Tarrifs"] ? "rotated" : ""
-                  }`}
+                  className={`dropdown-icon ${activeMenu["Tarrifs"] ? "rotated" : ""
+                    }`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -967,9 +935,8 @@ function Mega_Menu({ path, headerSelect }) {
                 </span>
               </div>
               <div
-                className={`submenu ${
-                  activeMenu["Tarrifs"] ? "expanded" : "collapsed"
-                }`}
+                className={`submenu ${activeMenu["Tarrifs"] ? "expanded" : "collapsed"
+                  }`}
               >
                 <a href="/Branch_Terms_And_Tariffs">
                   Branch Banking Terms and Tarrifs
@@ -3129,10 +3096,10 @@ function Mega_Menu({ path, headerSelect }) {
                               <GrFormNext></GrFormNext>
                             </h6>
                           </div>
-                                                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
-                                                        <p onMouseOver={() => { setShowContent(5) }} style={showContent == 5 ? { color: getColor() } : { color: getColor2(), display: 'flex' }}> Downloadables </p>
-                                                        <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
-                                                    </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+                            <p onMouseOver={() => { setShowContent(5) }} style={showContent == 5 ? { color: getColor() } : { color: getColor2(), display: 'flex' }}> Downloadables </p>
+                            <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
+                          </div>
                         </div>
 
                         <div>
@@ -3186,19 +3153,16 @@ function Mega_Menu({ path, headerSelect }) {
                           ) : (
                             ""
                           )}
-                                               
-                                                    {showContent === 5 ?
-                                                        <div className="aboutusNavItems animate__animated animate__zoomIn">
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
-                                                                <Link to='/environmentalPolicy' style={{ textDecoration: 'none' }}><p> Environmental, SOCIAL AND Governance POLICY </p></Link>
-                                                                <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
-                                                            </div>
-                                                            {/* <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
-                                                                <Link to='/NewsLetter' style={{ textDecoration: 'none' }}><p> News Letter </p></Link>
-                                                                <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
-                                                            </div> */}
-                                                        </div>
-                                                        : ""}
+
+                          {showContent === 5 ?
+                            <div className="aboutusNavItems animate__animated animate__zoomIn">
+                              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
+                                <Link to='/environmentalPolicy' style={{ textDecoration: 'none' }}><p> ESG Policy</p></Link>
+                                <h6 style={{ display: 'flex', alignItems: 'center' }}><GrFormNext></GrFormNext></h6>
+                              </div>
+                             
+                            </div>
+                            : ""}
                         </div>
                         <div
                           style={{ paddingLeft: "15px" }}

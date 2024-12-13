@@ -24,6 +24,7 @@ import ThreeCXChat from "./Chat/ThreeCXChat";
 import { format, parseISO } from 'date-fns';
 
 export default function StikyNav() {
+    
     const [showPopup, setShowPopup] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const rowsPerPage = 1; // Show only one row per page
@@ -72,7 +73,7 @@ export default function StikyNav() {
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th colSpan={2} style={{ paddingLeft: '5%' }} >Cash Notes</th>
+                                <th colSpan={2} style={{ paddingLeft: '5%' }} >Cash & Remittance</th>
                                 <th colSpan={2} style={{ paddingLeft: '5%' }}>Transactions</th>
                             </thead>
                             <thead>

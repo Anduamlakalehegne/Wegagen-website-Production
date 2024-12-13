@@ -264,15 +264,15 @@ function Header({ path }) {
           >
             Location
           </label>
-          <label
+          {/* <label
             onClick={() => {
               navigateToRateHistory();
             }}
           >
             Rate History
-          </label>
+          </label> */}
           {/* <label><span>Call 6782</span></label> */}
-          {/* <label><span>WEGAETAA XXX</span></label> */}
+          <label><span><a href="https://edif.gov.et">EDIF</a></span></label>
         </div>
         <div className="socialMediasLinks animate__animated animate__fadeInRight">
           <label>

@@ -25,12 +25,15 @@ export default function RateHistory() {
 
     try {
       const res = await axios(
-        `http://localhost:8000/api/exchange-rate-history/search?date1=${selectDate.date1}&date2=${selectDate.date2}`
+        `https://rate.wegagen.com/api/exchange-rate-history/search?date1=${selectDate.date1}&date2=${selectDate.date2}`
       );
+      console.log(selectDate)
 
       if (res) {
         setRateData(res.data);
+        console.log(res.data)
         const date = parseISO(res?.data[0].created_at);
+       
         setFormattedDate(format(date, "MMM dd, yyyy"));
         setFormattedDate2(format(date, "EEEE MMM dd, yyyy"));
         setError(null);
@@ -47,15 +50,17 @@ export default function RateHistory() {
       setLoading(true);
       try {
         const response = await axios(
-          "http://localhost:8000/api/exchange-rate-history"
+          "https://rate.wegagen.com/api/exchange-rate-history"
         );
 
         if (response) {
           setRateData(response.data);
 
-          const date = parseISO(response.data[0].rate_date);
+          const date = parseISO(response.data[0].created_at);
+          console.log(date)
           setFormattedDate(format(date, "MMM dd, yyyy"));
           setFormattedDate2(format(date, "EEEE MMM dd, yyyy"));
+          console.log(formattedDate2)
         }
       } catch (error) {
         setError(error.response ? error.response.data : error.message);

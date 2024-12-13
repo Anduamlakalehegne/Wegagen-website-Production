@@ -5,8 +5,9 @@ import styles from "./annualReport.module.css";
 import { FaInfoCircle } from 'react-icons/fa'; 
 import About_us from "../../../assets/Images/common.jpg";
 import StikyNav from "../Common/StikyNav";
-import Mega_Menu from "../Common/Mega_Menu";
+import Mega_Menu from "../Common/Mega_Menu";  
 import Footer from '../Common/Footer';
+import axios from 'axios'; // Import axios for HTTP requests
 import { API_BASE_URL } from '../Common/Config/Config'; 
 
 const MySwal = withReactContent(Swal);
@@ -16,55 +17,58 @@ export default function NewsLetter() {
 
     useEffect(() => {
         const fetchReports = async () => {
-            const response = await fetch(`${API_BASE_URL}/api/news-letters?pagination[page]=1&pagination[pageSize]=1000&populate=*`);
-            const data = await response.json();
-            const fetchedReports = data.data.map(report => ({
-                id: report.id,
-                name: report.attributes.name.trim(),
-                date: report.attributes.date.trim(),
-                imageUrl: `${API_BASE_URL}${report.attributes.featured_image.data.attributes.url}`,
-                pdfUrl: `${API_BASE_URL}${report.attributes.pdf_file.data[0].attributes.url}`, 
-            }));
-            setReports(fetchedReports);
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/news-letters?pagination[page]=1&pagination[pageSize]=1000&populate=*`);
+                const data = await response.json();
+                const fetchedReports = data.data.map(report => ({
+                    id: report.id,
+                    name: report.attributes.name.trim(),
+                    date: report.attributes.date.trim(),
+                    imageUrl: `${API_BASE_URL}${report.attributes.featured_image.data.attributes.url}`,
+                    pdfUrl: `${API_BASE_URL}${report.attributes.pdf_file.data[0].attributes.url}`, 
+                }));
+                setReports(fetchedReports);
+            } catch (error) {
+                console.error('Error fetching newsletters:', error);
+                MySwal.fire({
+                    icon: 'error',
+                    title: 'Failed to Fetch Newsletters',
+                    text: 'There was an error fetching the newsletters. Please try again later.',
+                });
+            }
         };
 
         fetchReports();
     }, []);
 
+    // Email verification using Hunter.io API
     const verifyEmail = async (email) => {
-        const apiKeys = ['4ZQhtRJIK0GwcaPTAbu6nxVy2NSjXr3M', 'K07WzMZ9UJyu8Ghmfntb2o4LHwAcNeI4', 'U7YWzESckeDrx6BN2Im5yAQGbHRVpgjZ', 'AFCBTqcwjIMY4Unm2NLp76gRsHJ38aDP', 'another_key_4', 'another_key_5'];
-        const serviceUri = 'https://emailverifierapi.com/v2/';
-    
-        for (const apiKey of apiKeys) {
-            const formData = new URLSearchParams();
-            formData.append('apiKey', apiKey);
-            formData.append('email', email);
-    
-            try {
-                const response = await fetch(serviceUri, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: formData.toString(),
-                });
-    
-                const responseData = await response.json();
-                if (responseData.status === 'passed' && responseData.event === 'mailboxExists') {
-                    return true; // Return true if email is verified successfully
+        try {
+            const response = await axios.get('https://api.hunter.io/v2/email-verifier', {
+                params: {
+                    email: email,
+                    api_key: "d17237178396a9f50b98da3e9662d07729dca663"
                 }
-            } catch (error) {
-                console.error(`Error verifying email with API key ${apiKey}:`, error);
+            });
+
+            const { result } = response.data.data;
+
+            // The result can be 'deliverable', 'risky', 'undeliverable', 'webmail', 'accept_all', 'disposable', or 'unknown'
+            // Consider 'deliverable' and 'risky' as valid
+            if (result === 'deliverable' || result === 'risky') {
+                return true; // Email is valid
+            } else {
+                return false; // Email is not valid
             }
+        } catch (error) {
+            console.error('Error verifying email:', error);
+            MySwal.fire({
+                icon: 'error',
+                title: 'Email Verification Failed',
+                text: 'Failed to verify the email address. Please try again later.',
+            });
+            return false; // Return false if there is an error
         }
-    
-        // If none of the API keys work or there's an error, return false
-        MySwal.fire({
-            icon: 'error',
-            title: 'Invalid Email',
-            text: 'Failed to verify the email. Please try again later.'
-        });
-        return false;
     };
 
     const handleEmailSubmission = async (report) => {
@@ -156,7 +160,7 @@ export default function NewsLetter() {
             html: (
                 <div>
                     <h1 style={{ fontSize: '27px', color: '#ff6b0b' }}>{report.name}</h1>
-                    <img src={report.imageUrl} alt="Report cover" style={{width: '100%', height: '400px'}} />
+                    <img src={report.imageUrl} alt="Report cover" style={{ width: '100%', height: '400px' }} />
                     <p><strong>Date:</strong> {report.date}</p>
                     <button className={styles.downloadButton} onClick={() => handleEmailSubmission(report)}>Download PDF</button>
                 </div>
@@ -176,7 +180,7 @@ export default function NewsLetter() {
             <div className={styles.serviceimage}>
                 <img src={About_us} alt="About us" />
             </div>
-            <p style={{fontSize: '30px', padding: '30px', fontWeight: '600', color: '#004360'}}>NewsLetter</p>
+            <p style={{fontSize: '30px', padding: '30px', fontWeight: '600', color: '#004360'}}>Newsletter</p>
             <div className={styles.reportsGrid}>
                 {reports.map((report) => (
                     <div key={report.id} className={styles.reportItem}>

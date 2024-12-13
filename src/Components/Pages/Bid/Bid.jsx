@@ -31,7 +31,11 @@ function Bid() {
             try {
                 const response = await fetch(apiUrl);
                 const json = await response.json();
-                setBidsData(json.data);
+
+                // Sort bids by createdAt field in descending order (latest first)
+                const sortedBids = json.data.sort((a, b) => new Date(b.attributes.createdAt) - new Date(a.attributes.createdAt));
+
+                setBidsData(sortedBids);
             } catch (error) {
                 console.error("Error fetching bids:", error);
             } finally {
@@ -57,13 +61,13 @@ function Bid() {
                             <img
                                 src={`https://weg.back.strapi.wegagen.com${bidData.data.attributes.featured_image.data.attributes.url}`}
                                 alt="Featured"
-                                style={{ width: "100%", height: "auto", marginTop: "10px", marginBottom: "30px" }}
+                                style={{ width: "100%", margin:"auto", height: "auto", marginTop: "10px", marginBottom: "30px" }}
                             />
                         ) : (
                             <img
                                 src={Newss}
                                 alt="Default featured"
-                                style={{ width: "100%", height: "auto", marginTop: "10px", marginBottom: "30px" }}
+                                style={{ width: "100%", margin:"auto", height: "auto", marginTop: "10px", marginBottom: "30px" }}
                             />
                         )}
                         {bidData.data.attributes.description.map((paragraph, index) => (
@@ -88,7 +92,7 @@ function Bid() {
                 showConfirmButton: false,
                 showDenyButton: true,
                 showCloseButton: true,
-                width: "800px",
+                width: "1000px",
                 denyButtonText: "Close",
                 imageClass: "img-responsive",
                 imageAlt: "Custom image",

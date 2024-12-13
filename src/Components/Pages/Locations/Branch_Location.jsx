@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DataGrid, GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarFilterButton } from '@mui/x-data-grid';
 import About_us from "../../../assets/Images/common.jpg";
 import Mega_Menu from "../Common/Mega_Menu";
 import Footer from "../Common/Footer";
@@ -9,22 +9,27 @@ import styles from "./location.module.css";
 function Branch_Location() {
     const [districtsData, setDistrictsData] = useState({});
     const [selectedDistrict, setSelectedDistrict] = useState('North Addis Ababa District Office');
-    const [isLoading, setIsLoading] = useState(true); // Added loading state
+    const [isLoading, setIsLoading] = useState(true);
     const apiUrl = 'https://weg.back.strapi.wegagen.com/api/branch-lists';
 
     useEffect(() => {
         const fetchData = async () => {
-            setIsLoading(true); // Start loading
+            setIsLoading(true);
             try {
                 const response = await fetch(`${apiUrl}?pagination[page]=1&pagination[pageSize]=1000`);
                 const data = await response.json();
-                const branchesData = data.data.map((branch) => ({
+                let branchesData = data.data.map((branch) => ({
                     id: branch.attributes.SN == null ? "" : branch.attributes.SN,
                     branchs: branch.attributes.branchs,
                     kirnchafoch: branch.attributes.kirnchafoch,
                     telephone: branch.attributes.telephone,
                     district: branch.attributes.district,
                 }));
+
+                // Sort branches by SN
+                branchesData = branchesData.sort((a, b) => {
+                    return a.id - b.id; // Assuming id (SN) is a number. If it's a string, modify sorting accordingly.
+                });
 
                 const groupedData = branchesData.reduce((acc, branch) => {
                     acc[branch.district] = acc[branch.district] || [];
@@ -33,16 +38,15 @@ function Branch_Location() {
                 }, {});
 
                 setDistrictsData(groupedData);
-                setIsLoading(false); // End loading
+                setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching data: ", error);
-                setIsLoading(false); // End loading, even if there's an error
+                setIsLoading(false);
             }
         };
 
         fetchData();
     }, []);
-
 
     const columns = [
         { field: 'id', headerName: 'ID', width: 80 },
@@ -72,13 +76,11 @@ function Branch_Location() {
             </GridToolbarContainer>
         );
     }
+
     return (
         <div className={styles.container}>
-
             <StikyNav />
-
             <Mega_Menu />
-
             <div className={styles.agarImage}>
                 <img src={About_us} alt="About us"></img>
             </div>

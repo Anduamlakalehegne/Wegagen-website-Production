@@ -38,6 +38,7 @@ export default function Footer({ footerColor }) {
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={International_Terms_And_Tariffs}> IBD Terms and Tariffs </p>
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={IFB_Terms_And_Tariffs}> IFB Tariffs </p>
             <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={Efoyta_Terms_And_Tariffs}> Efoyta Terms And Tariffs </p>
+            <p style={{ textAlign: 'center', cursor: 'pointer' }} onClick={Share_Terms_and_Tariffs}> Share Administration  Terms and Tariffs </p>
           </>
         </div>
       ),
@@ -84,6 +85,10 @@ export default function Footer({ footerColor }) {
     MySwal.close()
     navigate('/Efoyta_Terms_And_Tariffs')
   }
+  const Share_Terms_and_Tariffs = () => {
+    MySwal.close()
+    navigate('/Share_Terms_and_Tariffs')
+  }
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -125,7 +130,7 @@ export default function Footer({ footerColor }) {
                 <th></th>
                 <th></th>
                 <th></th>
-                <th colSpan={2} style={{ paddingLeft: '6%' }} >Cash Notes</th>
+                <th colSpan={2} style={{ paddingLeft: '6%' }} >Cash & Remittance</th>
                 <th colSpan={2} style={{ paddingLeft: '6%' }}>Transactions</th>
               </thead>
               <thead>
@@ -175,6 +180,22 @@ export default function Footer({ footerColor }) {
     });
   };
 
+  const [pdfUrl, setPdfUrl] = useState('');
+
+  useEffect(() => {
+    // Fetch the data from Strapi API
+    fetch('https://weg.back.strapi.wegagen.com/api/adeles?populate=*')
+      .then(response => response.json())
+      .then(data => {
+        const pdfFile = data.data[0]?.attributes?.file?.data[0]?.attributes?.url;
+        if (pdfFile) {
+          // Set the full URL for the PDF file
+          setPdfUrl(`https://weg.back.strapi.wegagen.com${pdfFile}`);
+        }
+      })
+      .catch(error => console.error('Error fetching the PDF:', error));
+  }, []);
+
 
 
   return (
@@ -198,12 +219,12 @@ export default function Footer({ footerColor }) {
           <p>SWIFT Code : WEGAETAA</p>
         </div>
         <div className='usefulLinkd'>
-          <p  style={{
-              fontSize: "20px",
-              '@media (max-width: 568px)': { 
-                fontSize: "4px"
-              }
-            }}>Useful Links</p>
+          <p style={{
+            fontSize: "20px",
+            '@media (max-width: 568px)': {
+              fontSize: "4px"
+            }
+          }}>Useful Links</p>
           <Link to="/Bid" style={{ textDecoration: 'none' }}><p>Bid</p></Link>
           <Link to="/ATM_Location" style={{ textDecoration: 'none' }}><p>ATM Locator</p></Link>
           <Link to="/Branch_Location" style={{ textDecoration: 'none' }}><p>Branches</p></Link>
@@ -212,26 +233,27 @@ export default function Footer({ footerColor }) {
         </div>
 
         <div className='customerSupport2'>
-          <p  style={{
-              fontSize: "20px",
-              '@media (max-width: 768px)': { // Change 768px to whatever breakpoint you prefer
-                fontSize: "15px"
-              }
-            }}>Resources</p>
+          <p style={{
+            fontSize: "20px",
+            '@media (max-width: 768px)': { // Change 768px to whatever breakpoint you prefer
+              fontSize: "15px"
+            }
+          }}>Resources</p>
           <Link to="/News" style={{ textDecoration: 'none' }}><p>News</p></Link>
           <Link to="/annualReport" style={{ textDecoration: 'none' }}><p>Annual Reports</p></Link>
           <Link to="/BankFormat" style={{ textDecoration: 'none' }}><p>Bank Format</p></Link>
           <Link to="/Gallery" style={{ textDecoration: 'none' }}><p>Gallery</p></Link>
+          <a href={pdfUrl} rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none', display: 'block' }} > <p>ADELE</p></a>
 
         </div>
 
         <div className='customerSupport'>
-          <p  style={{
-              fontSize: "20px",
-              '@media (max-width: 768px)': { // Change 768px to whatever breakpoint you prefer
-                fontSize: "13px"
-              }
-            }}> Customer Support</p>
+          <p style={{
+            fontSize: "20px",
+            '@media (max-width: 768px)': {
+              fontSize: "13px"
+            }
+          }}> Customer Support</p>
           {/* <p>FAQ</p>
           <p>Security Tips</p>  */}
           <p onClick={() => { exchageRate() }}>Exchange Rate</p>

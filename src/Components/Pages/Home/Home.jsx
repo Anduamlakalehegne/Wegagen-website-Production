@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./home.module.css";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,6 +6,7 @@ import "./home.css";
 import card1 from "../../../assets/Images/AGAR.svg";
 import card2 from "../../../assets/Images/Nigat.svg";
 import card3 from "../../../assets/Images/amana.svg";
+import card4 from "../../../assets/Images/GoldCard.png";
 import appstore from "../../../assets/Images/appstore.png";
 import playstore from "../../../assets/Images/playstore.jpg";
 import news from "../../../assets/Images/defualt.bmp";
@@ -71,30 +72,43 @@ import { API_BASE_URL } from "../Common/Config/Config"; // Import the base URL
 import LazyLoad from "react-lazyload";
 import { scroller } from 'react-scroll';
 
+import { scrollToElement } from '../utils/scrollToElement';
+
 spiral.register();
 
 export default function Home() {
 
-
-  const location = useLocation();
+  const exchangeRateRef = useRef(null);
 
   useEffect(() => {
-    if (location.hash) {
-      // Remove the '#' from the hash
-      const elementId = location.hash.substring(1);
+    const scrollToElement = () => {
+      if (window.location.hash === '#exchange-rate') {
+        const element = exchangeRateRef.current;
+        if (element) {
+          // Calculate the position of the element in the viewport
+          const yOffset = -110; // Adjust this value as needed for fixed headers or spacing
+          const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
 
-      // Use react-scroll to smoothly scroll to the element with the offset
-      scroller.scrollTo(elementId, {
-        duration: 800, // Time for scroll animation (milliseconds)
-        delay: 0,
-        smooth: 'easeInOutQuart',
-        offset: -220, // Adjust this to leave some space at the top (e.g., for fixed header)
-      });
-    }
-  }, [location]);
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
+          // Scroll to the element position minus the offset
+          window.scrollTo({ top: elementTop + yOffset, behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Set a delay to ensure the component has fully rendered and all layout shifts are completed
+    setTimeout(scrollToElement, 500); // 500ms delay; adjust as needed based on your component's loading time
+
+    // Optional: Re-scroll on hashchange event if navigating within the page 
+    window.addEventListener('hashchange', scrollToElement);
+
+    return () => {
+      window.removeEventListener('hashchange', scrollToElement);
+    };
+  }, []);
+
+
+
+
 
   const [dispaly, setDisplay] = useState(1);
   const [counterOn, setCounterON] = useState(false);
@@ -191,6 +205,46 @@ export default function Home() {
             access their money at any time 24/7 without being restricted by bank
             operating hours, make withdrawals up to Birr 10,000, make payments
             and check account balance.
+          </p>
+        </div>
+      ),
+      showConfirmButton: false,
+      showDenyButton: true,
+      showCloseButton: true,
+      width: "700px",
+      denyButtonText: "Close",
+      imageClass: "img-responsive",
+      imageAlt: "Custom image",
+      showClass: {
+        popup: `animate__animated animate__zoomIn ${styles.customSwalShow}`,
+      },
+      hideClass: {
+        popup: `animate__animated animate__zoomOut ${styles.customSwalHide}`,
+      },
+    }).then((result) => {
+      if (result.isDenied) {
+        //
+      }
+    });
+  };
+
+
+  const cardstoggle4 = () => {
+    const MySwal = withReactContent(Swal);
+    MySwal.fire({
+      html: (
+        <div className={styles.popOuter}>
+          <div className={styles.popImg}>
+            <img src={card4} alt="Ager Card" />
+          </div>
+          <label className={styles.popTitle}>Pre-Paid International Visa</label>
+          <p>
+            With the Visa card's widespread acceptance at millions of locations globally,
+            it ensures seamless transactions for both personal and business purposes,
+            whether at home or abroad. This makes it an essential tool for international
+            commerce and travel. Our Visa cards cater to a diverse range of customers—from
+            individuals to businesses—each enjoying the card's convenience, security, and
+            the ability to make contactless payments
           </p>
         </div>
       ),
@@ -410,140 +464,128 @@ export default function Home() {
         </LazyLoad>
       </div>
 
-      <>
 
-        <div className={styles.cards} >
-          <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1}  >
-            <label><object data={card1} alt="" /></label>
-            <h6>Agar <span>Card</span></h6>
-            <p>With our Agar debit card, you have the access to the money in your account
-              wherever you are and whenever you want. Using your Agar card is quicker than making
-              a trip to the bank and safer than carrying money.</p>
-            <button className={styles.readMore} onClick={() => { cardstoggle() }}>Read More</button>
-        <div className={styles.cards}>
-          <div data-aos="zoom-in" data-aos-delay="100" className={styles.card1}>
-            <label>
-              <object data={card1} alt="" />
-            </label>
-            <h6>
-              Agar <span>Card</span>
-            </h6>
-            <p>
-              With our Agar debit card, you have the access to the money in your
-              account wherever you are and whenever you want. Using your Agar
-              card is quicker than making a trip to the bank and safer than
-              carrying money.
-            </p>
-            <button
-              className={styles.readMore}
-              onClick={() => {
-                cardstoggle();
-              }}
-            >
-              Read More
-            </button>
-          </div>
 
-          <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
-            <label>
-              <object data={card2} alt="" />
-            </label>
-            <h6>
-              Nigat <span>Card</span>
-            </h6>
-            <p>
-              Step into a world of financial empowerment designed exclusively
-              for women with our Nigat Debit Card. Unleash the power of your
-              finances with Nigat card that mirrors your style and is linked to
-              Nigat Account, a savings account with attractive interest rate.
-              Enjoy a plethora of exclusive benefits tailored for the modern
-              woman.{" "}
-            </p>
-            <button
-              className={styles.readMore}
-              onClick={() => {
-                cardstoggle2();
-              }}
-            >
-              Read More
-            </button>
-          </div>
+      <div className={styles.cards}>
 
-          <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100" >
-            <label><object data={card3} alt="" /></label>
-            <h6>Amana <span>Card </span></h6> 
-            <p>Amana is a specialized card for our Interest Free Banking Customers. The card is linked to customer’s
-              account and you can induldge with the convenience of accessing your account anytime anywhere.</p>
-            <button className={styles.readMore} onClick={() => { cardstoggle3() }}>Read More</button>
-          <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
-            <label>
-              <object data={card3} alt="" />
-            </label>
-            <h6>
-              Amana <span>Card </span>
-            </h6>
-            <p>
-              Amana is a specialized card for our Interest Free Banking
-              Customers. The card is linked to customer’s account and you can
-              induldge with the convenience of accessing your account anytime
-              anywhere.
-            </p>
-            <button
-              className={styles.readMore}
-              onClick={() => {
-                cardstoggle3();
-              }}
-            >
-              Read More
-            </button>
-          </div>
+        <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
+          <label>
+            <object data={card4} alt="" />
+          </label>
+          <h6>
+            Pre-Paid International <span> Visa Card</span>
+          </h6>
+          <p>
+            Wegagen Pre-Paid International Visa Card is a versatile payment solution offered in the
+            form of debit card, issued by Wegagen Bank in partnership with Visa Inc, a leading global
+            payments technology company. The card allows secure electronic fund transfer and payment
+            between cardholders and merchants worldwide through the reliable Visa network.
+          </p>
+          <button
+            className={styles.readMore}
+            onClick={() => {
+              cardstoggle4();
+            }}
+          >
+            Read More
+          </button>
         </div>
-      </>
 
-      <div  style={{ marginBottom: "100px" }}  id="exchange-rate">
+        <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
+          <label>
+            <object data={card1} alt="" />
+          </label>
+          <h6>
+            Agar <span>Card</span>
+          </h6>
+          <p>
+            With our Agar debit card, you have the access to the money in your
+            account wherever you are and whenever you want. Using your Agar
+            card is quicker than making a trip to the bank and safer than
+            carrying money.
+          </p>
+          <button
+            className={styles.readMore}
+            onClick={() => {
+              cardstoggle();
+            }}
+          >
+            Read More
+          </button>
+        </div>
 
-        <div className={styles.exchangeRate} >
-      <div style={{ marginBottom: "100px" }}>
-        <div className={styles.exchangeRate}>
+        <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100">
+          <label>
+            <object data={card2} alt="" />
+          </label>
+          <h6>
+            Nigat <span>Card</span>
+          </h6>
+          <p>
+            Step into a world of financial empowerment designed exclusively
+            for women with our Nigat Debit Card. Unleash the power of your
+            finances with Nigat card that mirrors your style and is linked to
+            Nigat Account, a savings account with attractive interest rate.
+            Enjoy a plethora of exclusive benefits tailored for the modern
+            woman.{" "}
+          </p>
+          <button
+            className={styles.readMore}
+            onClick={() => {
+              cardstoggle2();
+            }}
+          >
+            Read More
+          </button>
+        </div>
+
+        <div className={styles.card1} data-aos="zoom-in" data-aos-delay="100" >
+          <label><object data={card3} alt="" /></label>
+          <h6>Amana <span>Card </span></h6>
+          <p>Amana is a specialized card for our Interest Free Banking Customers. The card is linked to customer’s
+            account and you can induldge with the convenience of accessing your account anytime anywhere.</p>
+          <button className={styles.readMore} onClick={() => { cardstoggle3() }}>Read More</button>
+        </div>
+      </div>
+
+
+      <div style={{ paddingTop: '10px' }}   >
+        <div className={styles.exchangeRate} id="exchange-rate"
+          ref={exchangeRateRef}
+          style={{ paddingTop: '20px' }} // Adjust padding as needed
+        >
           <div className={styles.exchangeRateInfo}>
             <div className={styles.rightSide}>
               <p className={styles.headerTitle3}>Exchange Rate</p>
               <p className={styles.headerTitle2}>የዕለቱ የውጭ ምንዛሬ ተመን</p>
               <p style={{ color: "#ff6b0b", fontSize: '17px' }}>Foreign Exchange Rate Applicable</p>
               <p style={{ color: "#ff6b0b", fontSize: '17px' }}>On {formattedDate2}</p>
-              <p className={styles.headerTitle2}>የዕለቱ የዉጭ ምንዛሬ ተመን</p>
-              <p style={{ color: "#ff6b0b", fontSize: "17px" }}>
-                Foreign Exchange Rate Applicable
-              </p>
-              <p style={{ color: "#ff6b0b", fontSize: "17px" }}>
-                On {formattedDate2}
-              </p>
+
             </div>
           </div>
           <div className={styles.ecxhangerightImg}>
             <div className={styles.popOuter}>
               <div
                 className={styles.popexchange}
-                style={{ marginBottom: "10px" }}
+                style={{ marginBottom: "10px" }} 
               >
-                <p
-                  className={styles.popexchangeHeader}
-                  style={{
-                    fontSize: "1.2rem",
-                    fontWeight: "300",
-                    textAlign: "right",
-                    color: "blue",
-                  }}
-                >
-                  <Link to="/Rate_History">Check history</Link>
-                </p>
+                <div className={styles.tableContainer}>
+                  {/* <Link to="/Rate_History" style={{ textDecoration: 'none' }}>
+                    <p
+                      className={styles.exchageRatebutton}
+                      style={{ padding: '4px 30px' }}
+                    >
+                      Check History
+                    </p>
+                  </Link> */}
+                </div>
                 <table>
                   <thead>
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th colSpan={2} style={{ paddingLeft: "5%" }}>
-                      Cash Notes
+                    <th colSpan={2} style={{ paddingLeft: "3%" }}>
+                      Cash & Remittance
                     </th>
                     <th colSpan={2} style={{ paddingLeft: "5%" }}>
                       Transactions
@@ -588,6 +630,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
       <div className={styles.stayConnected}>
         <div
@@ -1212,7 +1255,7 @@ export default function Home() {
                 onExit={() => setCounterON(false)}
               >
                 {/* <div style={{ fontSize: "15px" }}> */}
-                {counterOn && <CountUp start={0} end={438} duration={5} />} +
+                {counterOn && <CountUp start={0} end={441} duration={5} />} +
                 {/* </div> */}
               </ScrollTrigger>
             </span>
@@ -1276,5 +1319,6 @@ export default function Home() {
         <Footer />
       </div>
     </div>
+
   );
 }

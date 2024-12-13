@@ -355,12 +355,35 @@ export default function AboutUs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch initial data to get total count
-        let response = await fetch(
+        // Fetch data from the API
+        const response = await fetch(
           "https://weg.back.strapi.wegagen.com/api/corporate-governances?filters[class][$eq]=District%20Directors%20Team&populate=*"
         );
-        let data = await response.json();
-        setDistrictManagementTeam(data.data);
+        const data = await response.json();
+
+        // Desired order array
+        const desiredOrder = [
+          "W/ Genet B/Meskel",
+          "Ashenafi Gidey",
+          "Agere Belay",
+          "Kidane W/Giorgis",
+          "Yohannes Assefa",
+          "Zenebe Asayehegn",
+          "Daniel Liben",
+          "Kassanew Alem",
+          "Mulugeta Zerga",
+          "Habtamu Nigussie",
+        ];
+
+        // Sort the data based on the desired order
+        const sortedData = data.data.sort((a, b) => {
+          const indexA = desiredOrder.indexOf(a.attributes.full_name.trim());
+          const indexB = desiredOrder.indexOf(b.attributes.full_name.trim());
+          return indexA - indexB;
+        });
+
+        // Set the sorted data to the state
+        setDistrictManagementTeam(sortedData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -506,7 +529,7 @@ export default function AboutUs() {
                   Established on November 1996, Wegagen Bank S.C. emerged from
                   the visionary mindset of sixteen founding members who
                   recognized the pivotal role financial institutions would play
-                  in fosteeeering sustained economic development.
+                  in fostering sustained economic development.
                 </p>
                 <p style={{ marginBottom: "15px" }}>
                   With an initial paid-in capital of Birr 30 million, the bank
@@ -760,8 +783,7 @@ export default function AboutUs() {
                       data-aos-delay="10"
                     >
                       <label>
-                        I. Risk & Compliance Management and Loan Review
-                        Sub-Committee
+                        I. Risk Management & Compliance Sub-Board Committee
                       </label>
                       {/* <p>Members,</p> */}
                       <ul style={{ marginLeft: "25px" }}>
@@ -769,14 +791,11 @@ export default function AboutUs() {
                         <li data-aos="zoom-in" data-aos-delay="100">
                           1. Ato Alemseged Assefa - Chairperson
                         </li>
+                        <li data-aos="zoom-in" data-aos-delay="700">
+                          2. Ato Zenfu Asfaw - Member
+                        </li>
                         <li data-aos="zoom-in" data-aos-delay="400">
-                          2. Ato Fikru Jiregna - Member
-                        </li>
-                        <li data-aos="zoom-in" data-aos-delay="700">
-                          3. Ato Tesfatsyon Desta - Member
-                        </li>
-                        <li data-aos="zoom-in" data-aos-delay="700">
-                          4. Ato Zenfu Asfaw - Member
+                          3. Ato Fikru Jiregna - Member
                         </li>
                       </ul>
                     </li>
@@ -786,8 +805,7 @@ export default function AboutUs() {
                       data-aos="zoom-in"
                       data-aos-delay="10"
                     >
-                      <label>II. Audit Sub-Committee </label>
-                      {/* <p>Members,</p> */}
+                      <label>II. Board Audit sub committee  </label>
                       <ul style={{ marginLeft: "25px" }}>
                         <li data-aos="zoom-in" data-aos-delay="100">
                           1. Ato Hassen Yesuf - Chairperson
@@ -806,8 +824,7 @@ export default function AboutUs() {
                       data-aos="zoom-in"
                       data-aos-delay="10"
                     >
-                      <label>III. HR and IT Sub-Committee</label>
-                      {/* <p>Members,</p> */}
+                      <label>III. Nomination & Remuneration Sub-Committee </label>
                       <ul style={{ marginLeft: "25px" }}>
                         <li data-aos="zoom-in" data-aos-delay="100">
                           1. Ato Woldegabriel Naizghi - Chairperson
@@ -816,10 +833,36 @@ export default function AboutUs() {
                           2. Ato Gebregziabher Haddush - Member
                         </li>
                         <li data-aos="zoom-in" data-aos-delay="700">
-                          3. Ato Surafeal Berhe - Member
+                          3. Ato Tesfatsyon Desta - Member
+                        </li>
+                        <li data-aos="zoom-in" data-aos-delay="700">
+                          4. Ato Surafeal Berhe - Member
                         </li>
                       </ul>
                     </li>
+
+                    <li
+                      style={{ marginBottom: "15px" }}
+                      data-aos="zoom-in"
+                      data-aos-delay="10"
+                    >
+                      <label>IV. Credit Sub-Committee  </label>
+                      <ul style={{ marginLeft: "25px" }}>
+                        <li data-aos="zoom-in" data-aos-delay="100">
+                          1. Ato Woldegabriel Naizghi - Chairperson
+                        </li>
+                        <li data-aos="zoom-in" data-aos-delay="400">
+                          2. Ato Gebregziabher Haddush - Member
+                        </li>
+                        <li data-aos="zoom-in" data-aos-delay="700">
+                          3. Ato Alemseged Assefa - Member
+                        </li>
+                        <li data-aos="zoom-in" data-aos-delay="700">
+                          4. Ato Fikru Jiregna - Member
+                        </li>
+                      </ul>
+                    </li>
+
                   </ol>
                 </div>
               </div>
@@ -833,22 +876,6 @@ export default function AboutUs() {
               <div className={styles.Boardofdirectors}>
                 <h2>Core Management</h2>
               </div>
-              {/* <div className={styles.boardcontainer} style={{ marginTop: '20px' }}>
-                                {CoreManagement.map((member) => (
-                                    <div
-                                        data-aos="zoom-in"
-                                        data-aos-delay="100"
-                                        className={`${styles.membercard} animate__animated animate__bounceInUp`}
-                                    >
-                                        <img src={member.image} alt={member.name} className={styles.memberphoto} />
-
-                                        <div className={styles.memberinfo}>
-                                            <h6>{member.name}</h6>
-                                            <p>{member.role}</p> 
-                                        </div>
-                                    </div>
-                                ))}
-                            </div> */}
 
               <div className={styles.boardcontainer}>
                 {coreManagements2.map((member) => (
@@ -942,9 +969,8 @@ export default function AboutUs() {
                     className={`${styles.membercard} animate__animated animate__bounceInUp`}
                   >
                     <img
-                      src={`https://weg.back.strapi.wegagen.com${
-                        member.attributes.image?.data?.attributes.url || defualt
-                      }`} // Fallback to a default image if none is provided
+                      src={`https://weg.back.strapi.wegagen.com${member.attributes.image?.data?.attributes.url || defualt
+                        }`} // Fallback to a default image if none is provided
                       alt={member.attributes.full_name}
                       className={styles.memberPhoto}
                       style={{ width: "90%", margin: "auto" }}
@@ -976,9 +1002,8 @@ export default function AboutUs() {
                     className={`${styles.membercard} animate__animated animate__bounceInUp`}
                   >
                     <img
-                      src={`https://weg.back.strapi.wegagen.com${
-                        member.attributes.image?.data?.attributes.url || defualt
-                      }`} // Fallback to a default image if none is provided
+                      src={`https://weg.back.strapi.wegagen.com${member.attributes.image?.data?.attributes.url || defualt
+                        }`} // Fallback to a default image if none is provided
                       alt={member.attributes.full_name}
                       className={styles.memberPhoto}
                       style={{ width: "90%", margin: "auto" }}
@@ -1007,7 +1032,7 @@ export default function AboutUs() {
                     dateClassName="dateClassName"
                     contentArrowStyle={{ borderRight: "10px solid  #e3e3e3" }}
                     contentStyle={{
-                      background: "#e3e3e3",
+                      // background: "#e3e3e3",
                       color: "#5d5d5d",
                       paddingRight: "30px",
                     }}
@@ -1788,42 +1813,6 @@ export default function AboutUs() {
 
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    date="2023"
-                    dateClassName="dateClassName"
-                    contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
-                    contentStyle={{
-                      background: "#e3e3e3",
-                      color: "#5d5d5d",
-                      paddingRight: "50px",
-                    }}
-                    iconStyle={{
-                      background: "#ff8f12",
-                      color: "white",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                    icon={<span style={{ fontSize: "1.8vh" }}>June 30</span>}
-                  >
-                    <h6
-                      style={{
-                        fontSize: "17px",
-                        color: "#ff6b0b",
-                        textAlign: "right",
-                        marginBottom: "-10px",
-                      }}
-                      className="vertical-timeline-element-title"
-                    >
-                      Generated the Highest Ever Recorded Income & Profit
-                    </h6>
-                    <p style={{ fontSize: "13px", textAlign: "right" }}>
-                      June 2023, Registered Birr 7 Billion Income and Birr 1.2
-                      Billion Profit
-                    </p>
-                  </VerticalTimelineElement>
-
-                  <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
                     date="2024"
                     dateClassName="dateClassName"
                     contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
@@ -1854,6 +1843,111 @@ export default function AboutUs() {
                     </h6>
                     <p style={{ fontSize: "13px", textAlign: "right" }}>
                       Feb 2024, Launched Wegagen Mobile Application
+                    </p>
+                  </VerticalTimelineElement>
+
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="2024"
+                    dateClassName="dateClassName"
+                    contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
+                    contentStyle={{
+                      background: "#e3e3e3",
+                      color: "#5d5d5d",
+                      paddingRight: "50px",
+                    }}
+                    iconStyle={{
+                      background: "#ff8f12",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                    icon={<span style={{ fontSize: "1.8vh" }}>June</span>}
+                  >
+                    <h6
+                      style={{
+                        fontSize: "17px",
+                        color: "#ff6b0b",
+                        textAlign: "right",
+                        marginBottom: "-10px",
+                      }}
+                      className="vertical-timeline-element-title"
+                    >
+                      Generated the highest ever recorded Income and Profit
+                    </h6>
+                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                      June 2024 Registered Birr 9.8 Billion Income and Birr 2.2 Billion Gross Profit.
+                    </p>
+                  </VerticalTimelineElement>
+
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="2024"
+                    dateClassName="dateClassName"
+                    contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
+                    contentStyle={{
+                      background: "#e3e3e3",
+                      color: "#5d5d5d",
+                      paddingRight: "50px",
+                    }}
+                    iconStyle={{
+                      background: "#ff8f12",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                    icon={<span style={{ fontSize: "1.8vh" }}>July</span>}
+                  >
+                    <h6
+                      style={{
+                        fontSize: "17px",
+                        color: "#ff6b0b",
+                        textAlign: "right",
+                        marginBottom: "-10px",
+                      }}
+                      className="vertical-timeline-element-title"
+                    >
+                      Introduced Efoyta
+                    </h6>
+                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                      July 2024 Launched the Digital Lending " Efoyta " which propels financial inclusion by providing access to finance for nano and SME businesses.
+                    </p>
+                  </VerticalTimelineElement>
+
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    date="2024"
+                    dateClassName="dateClassName"
+                    contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
+                    contentStyle={{
+                      background: "#e3e3e3",
+                      color: "#5d5d5d",
+                      paddingRight: "50px",
+                    }}
+                    iconStyle={{
+                      background: "#ff8f12",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                    icon={<span style={{ fontSize: "1.8vh" }}>August </span>}
+                  >
+                    <h6
+                      style={{
+                        fontSize: "17px",
+                        color: "#ff6b0b",
+                        textAlign: "right",
+                        marginBottom: "-10px",
+                      }}
+                      className="vertical-timeline-element-title"
+                    >
+                      Introduced Wegagen Visa Prepaid International Card
+                    </h6>
+                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                      August 2024, launched Pre-paid Visa International Payment Card, which provides debit card for those traveling abroad.
                     </p>
                   </VerticalTimelineElement>
 

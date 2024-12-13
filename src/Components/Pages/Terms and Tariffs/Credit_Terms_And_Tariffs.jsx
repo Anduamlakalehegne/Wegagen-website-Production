@@ -15,10 +15,10 @@ import About_us from "../../../assets/Images/common.jpg";
 const Credit_Terms_And_Tariffs = () => {
 
     useEffect(() => {
-        Aos.init(); 
+        Aos.init();
     }, []);
 
-    const [dispaly, setDisplay] = useState(1); 
+    const [dispaly, setDisplay] = useState(1);
     const [showMenu, setshowMenu] = useState(false);
 
     useEffect(() => {
@@ -132,42 +132,32 @@ const Credit_Terms_And_Tariffs = () => {
                                     <tr>
                                         <td>1.1</td>
                                         <td>Collateral substitution fee</td>
-                                        <td>2,500.00</td>
+                                        <td>Birr 5,000 per each requested collateral release (per Book-let, per LHC and etc.)</td>
                                     </tr>
                                     <tr>
                                         <td>1.2</td>
                                         <td>Collateral Release fee</td>
-                                        <td>2,500.00</td>
+                                        <td>Birr 5,000 per each requested collateral release (per Book-let, per LHC and etc.)</td>
                                     </tr>
                                     <tr>
                                         <td>1.3</td>
                                         <td>Amendment related to collateral</td>
-                                        <td>2,500.00</td>
+                                        <td>Birr 5,000 per each requested collateral release (per Book-let, per LHC and etc.)</td>
                                     </tr>
                                     <tr>
                                         <td>1.4</td>
                                         <td>Allowing collateral to be registered as second party per Each collateral</td>
-                                        <td>5,000.00</td>
+                                        <td>5,000</td>
                                     </tr>
                                     <tr>
                                         <td>1.5</td>
-                                        <td>Revaluation Of Collateral</td>
-                                        <td>As per the new rate</td>
+                                        <td>Appeal on Collateral estimation</td>
+                                        <td>50% of the original estimation fee</td>
                                     </tr>
                                     <tr>
                                         <td>1.6</td>
-                                        <td>Appeal on Collateral</td>
-                                        <td>2,000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1.7</td>
                                         <td>Registration of initial notice</td>
                                         <td>500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1.8</td>
-                                        <td>Extending the period of effectiveness of initial notice</td>
-                                        <td>100</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -178,7 +168,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 2 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>2. Collateral Estimation</p>
+                        <p className={styles.termsTitle}>2. Collateral Estimation</p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -195,48 +185,48 @@ const Credit_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>2.1</td>
-                                    <td>Residential Building/apartment unit</td>
-                                    <td>900+400 for each unit</td>
+                                    <td>Residential Building up to one floor</td>
+                                    <td>2,000 per building and +500 for each</td>
                                 </tr>
                                 <tr>
                                     <td>2.2</td>
-                                    <td>Residential Building with more Than one floor</td>
-                                    <td>900+100/floor</td>
+                                    <td>Residential Building/ apartment (with single LHC)with more than one floor</td>
+                                    <td>2,500/ building and 500 /floor</td>
                                 </tr>
                                 <tr>
                                     <td>2.3</td>
-                                    <td>Hotel, Guesthouse, commercial building and apartment</td>
-                                    <td>1,500+150/floor</td>
+                                    <td>Apartment, Hotel & Guest house</td>
+                                    <td>5,000+500/ floor</td>
                                 </tr>
                                 <tr>
                                     <td>2.4</td>
-                                    <td>Store, warehouse and factories</td>
-                                    <td>850+150/floor</td>
+                                    <td>Commercial and mixed building</td>
+                                    <td>3,500+ 500 /floor</td>
                                 </tr>
                                 <tr>
                                     <td>2.5</td>
-                                    <td>Fuel station</td>
-                                    <td>850/tanker for building as per the above rate</td>
+                                    <td>Store, warehouse and factories</td>
+                                    <td>Birr 5,000 in group in one factory </td>
                                 </tr>
                                 <tr>
                                     <td>2.6</td>
-                                    <td>Flower Farm</td>
-                                    <td>1,500 / greenhouse + 150/block for buildings</td>
+                                    <td>Fuel station</td>
+                                    <td>ETB 3,000 per/tanker and related buildings are treated as the same to commercial buildings</td>
                                 </tr>
                                 <tr>
                                     <td>2.7</td>
-                                    <td>Coffee hulling and washing station</td>
-                                    <td>2,300.00/site</td>
+                                    <td>Flower Farm</td>
+                                    <td>minimum 3,000 for one greenhouse +1000/ additional green house and building as per commercial rate </td>
                                 </tr>
                                 <tr>
                                     <td>2.8</td>
-                                    <td>Coffee and other plantation</td>
-                                    <td>400/hectare but not more than 0.5% of the loan</td>
+                                    <td>Coffee hauling and washing station</td>
+                                    <td>Birr 5,000 per site </td>
                                 </tr>
                                 <tr>
                                     <td>2.9</td>
-                                    <td>Staff housing</td>
-                                    <td>free</td>
+                                    <td>Coffee and other plantation</td>
+                                    <td>Birr 1,500 per hectare but not more than 0.5% of the loan request</td>
                                 </tr>
 
                             </tbody>
@@ -247,7 +237,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 3 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>3. Movable collateral Management fee </p>
+                        <p className={styles.termsTitle}>3. Movable collateral Management fee </p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -264,18 +254,23 @@ const Credit_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>3.1</td>
-                                    <td>Motor Vehicle</td>
-                                    <td>500/Booklet</td>
+                                    <td>Automobile</td>
+                                    <td>1,000/Booklet</td>
                                 </tr>
                                 <tr>
                                     <td>3.2</td>
-                                    <td>Factory Machinery</td>
-                                    <td>1,000.00/machinery up to 6 Mil<br />3,000/plant up to 20 Mil<br />10,000/plant if its above 20 Mil</td>
+                                    <td>Passenger vehicles & trucks</td>
+                                    <td>3,000/ booklet( for trailers birr 500 is added)</td>
                                 </tr>
                                 <tr>
                                     <td>3.3</td>
+                                    <td>Factory Machinery</td>
+                                    <td>1,000.00/machinery up to 6 Million <br />3,000/plant up to 20 Million<br />10,000/plant if its above 20 Million</td>
+                                </tr>
+                                <tr>
+                                    <td>3.4</td>
                                     <td>Construction Machinery and Equipment</td>
-                                    <td>600 each</td>
+                                    <td>3,000 / booklet each</td>
                                 </tr>
 
                             </tbody>
@@ -286,7 +281,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 4 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>4. New credit facility</p>
+                        <p className={styles.termsTitle}>4. New credit facility</p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -324,7 +319,7 @@ const Credit_Terms_And_Tariffs = () => {
                                 <tr>
                                     <td>4.5</td>
                                     <td>Loan approval on CCR</td>
-                                    <td>2,000.00</td>
+                                    <td>3,000</td>
                                 </tr>
 
                             </tbody>
@@ -334,7 +329,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 5 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>5. Renegotiated loans</p>
+                        <p className={styles.termsTitle}>5. Renegotiated loans</p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -351,17 +346,17 @@ const Credit_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>5.1</td>
-                                    <td>Waiver of repayment</td>
+                                    <td>Waiver of repayment(for each loan account)</td>
                                     <td>75% of the loan processing fee based on the outstanding balance (minimum Birr 5,000)</td>
                                 </tr>
                                 <tr>
                                     <td>5.2</td>
-                                    <td>Rescheduling</td>
+                                    <td>Rescheduling (for each loan account) </td>
                                     <td>75% of the loan processing fee based on the outstanding balance (minimum Birr 5,000)</td>
                                 </tr>
                                 <tr>
                                     <td>5.3</td>
-                                    <td>Amendment of repayment</td>
+                                    <td>Amendment of repayment (for each loan account)</td>
                                     <td>75% of the loan processing fee based on the outstanding balance (minimum Birr 5,000)</td>
                                 </tr>
                                 <tr>
@@ -371,28 +366,28 @@ const Credit_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>5.5</td>
-                                    <td>Guarantee extension/amendment fee</td>
-                                    <td>3,000.00</td>
+                                    <td>Pre-shipment extension fee</td>
+                                    <td>5,000/ contract </td>
                                 </tr>
                                 <tr>
                                     <td>5.6</td>
+                                    <td>Guarantee extension/amendment fee</td>
+                                    <td>5,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>5.7</td>
                                     <td>Guarantee conversion to term loan</td>
                                     <td>10,000.00</td>
                                 </tr>
                                 <tr>
-                                    <td>5.7</td>
+                                    <td>5.8</td>
                                     <td>Credit approval confirmation fee</td>
                                     <td>5,000.00</td>
                                 </tr>
                                 <tr>
-                                    <td>5.8</td>
+                                    <td>5.9</td>
                                     <td>Any letter regarding credit facility To be issued at the request of the borrower/customer/supplier</td>
                                     <td>500.00</td>
-                                </tr>
-                                <tr>
-                                    <td>5.9</td>
-                                    <td>Special Mention follow-up fee</td>
-                                    <td>1.5%/month on installment amount (minimum 1,000 birr) </td>
                                 </tr>
                                 <tr>
                                     <td>5.10</td>
@@ -402,14 +397,13 @@ const Credit_Terms_And_Tariffs = () => {
                                 <tr>
                                     <td>5.11</td>
                                     <td>Additional Grace period for Project Loans</td>
-                                    <td>2,500.00</td>
+                                    <td>Birr 10,000.00 for the 1st time and Birr 20,000.00 for more than one time request</td>
                                 </tr>
                                 <tr>
                                     <td>5.12</td>
                                     <td>Waiver of interest payment on Grace period</td>
                                     <td>2.5% of accumulated interest every quarter until repayment is Started</td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -418,7 +412,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 6 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>6. Loan reapproval fee </p>
+                        <p className={styles.termsTitle}>6. Loan reapproval fee </p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -438,11 +432,11 @@ const Credit_Terms_And_Tariffs = () => {
                                     <td>Commitment fee for unutilized fund after re approval</td>
                                     <td>0.5% of the outstanding loan balance min 10,000.00</td>
                                 </tr>
-                                <tr>
+                                {/* <tr>
                                     <td>6.2</td>
                                     <td>Arrangement fee</td>
                                     <td>0.5% of the outstanding loan balance to be renegotiated but not more than 200,000.00 birr</td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                     </div>
@@ -451,7 +445,7 @@ const Credit_Terms_And_Tariffs = () => {
                 {dispaly == 7 ?
 
                     <div className={`${styles.history} animate__animated animate__bounceInUp`}>
-                    <p className={styles.termsTitle}>7. Other Credit Terms And Tariffs</p>
+                        <p className={styles.termsTitle}>7. Other Credit Terms And Tariffs</p>
                         <table className={styles.container}>
                             <thead>
                                 <tr className={styles.headerRowss}>
@@ -463,23 +457,34 @@ const Credit_Terms_And_Tariffs = () => {
                             <tbody>
                                 <tr>
                                     <td>7</td>
+                                    <td colSpan={2}>Foreclosure</td>
+                                </tr>
+                                <tr>
+                                    <td>7.1</td>
                                     <td>Cancellation  Suspension of foreclosure decision</td>
-                                    <td>up to 10 mil 5000/case 10 Million up to 50 million 10,000/case above 50 Million 25,000.00 on cash</td>
+                                    <td>up to 10 mill 5000/ case 10 Million up to 50 million 10,000/case above 50 Million 25,000.00 on cash</td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
+                                    <td colSpan={2}>Insurance Charge</td>
+                                </tr>
+                                <tr>
+                                    <td>8.1</td>
                                     <td>Insurance Premium payment charge</td>
-                                    <td>10.5% of the insurance premium (minimum birr 3,000)</td>
+                                    <td>15% of the insurance premium (Minimum Birr 5,000.00 per each insurance premium)</td>
                                 </tr>
                                 <tr>
                                     <td>9</td>
+                                    <td colSpan={2}>Loan re -approval by the reason of the customer</td>
+                                </tr>
+                                <tr>
+                                    <td>9.1</td>
                                     <td>Loan re-approval by the reason of the customer</td>
                                     <td>5,000.00</td>
                                 </tr>
-                                <tr className={styles.subHeaderRow} >
+                                <tr>
                                     <td>10</td>
-                                    <td>Merchandise Loan Handling charge</td>
-                                    <td></td>
+                                    <td colSpan={2}>Merchandise Loan Handling charge</td>
                                 </tr>
                                 <tr>
                                     <td>10.1</td>
@@ -488,18 +493,39 @@ const Credit_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>11</td>
+                                    <td colSpan={2}>Appeal</td>
+                                </tr>
+                                <tr>
+                                    <td>11.1</td>
                                     <td>Appeal</td>
-                                    <td>2,500.00</td>
+                                    <td>25% of the loan processing fee</td>
                                 </tr>
                                 <tr>
                                     <td>12</td>
-                                    <td>Credit Early settlement</td>
-                                    <td>1,000.00</td>
+                                    <td colSpan={2}>Early Settlement</td>
+                                </tr>
+                                <tr>
+                                    <td>12.1</td>
+                                    <td>Credit Early settlement ( if initiated by the applicant)</td>
+                                    <td>5% of the outstanding loan balance</td>
                                 </tr>
                                 <tr>
                                     <td>13</td>
+                                    <td colSpan={2}>Settlement of Pre-shipment</td>
+                                </tr>
+                                <tr>
+                                    <td>13.1</td>
                                     <td>Settlement of Pre-shipment loan in Birr</td>
                                     <td>5% on the amount which makes Hardcore and converted to term loan only</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td colSpan={2}>Staff</td>
+                                </tr>
+                                <tr>
+                                    <td>14.1</td>
+                                    <td>Staff estimation</td>
+                                    <td>100</td>
                                 </tr>
                             </tbody>
                         </table>

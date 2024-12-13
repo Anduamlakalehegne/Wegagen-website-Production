@@ -53,6 +53,10 @@ import BankFormat from './Components/Pages/News/BankFormats';
 import Efoyta_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Efoyta_Terms_And_Tariffs';
 import EnvironmentalPolicy from './Components/Pages/News/EnvironmentalPolicy';
 import RateHistory from "./Components/Pages/RateHistory/RateHistory";
+import TermsAndConditions from "./Components/Pages/Terms_and_Conditions/TermsAndConditions";
+import PrivacyPolicy from "./Components/Pages/PrivacyPolicy/PrivacyPolicy";
+import EfoytaPrivacyPolicy from "./Components/Pages/PrivacyPolicy/EfoytaPrivacyPolicy";
+import Share_Terms_and_Tariffs from "./Components/Pages/Terms and Tariffs/Share_Terms_and_Tariffs";
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 
@@ -144,6 +148,10 @@ function App() {
             path="/Efoyta_Terms_And_Tariffs"
             element={<Efoyta_Terms_And_Tariffs />}
           />
+           <Route
+            path="/Share_Terms_and_Tariffs"
+            element={<Share_Terms_and_Tariffs />}
+          />
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Interest_Rate" element={<Interest_Rate />} />
           <Route path="/NewsLetter" element={<NewsLetter />} />
@@ -155,6 +163,9 @@ function App() {
           <Route path="/Notification" element={<Notification />} />
           <Route path="/BankFormat" element={<BankFormat />} />
           <Route path="/Rate_History" element={<RateHistory />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-and-police" element={<PrivacyPolicy />} />
+          <Route path="/efoyta-privacy-Policy" element={<EfoytaPrivacyPolicy />} />
           
         </Routes>
       </BrowserRouter>

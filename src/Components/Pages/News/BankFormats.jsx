@@ -7,7 +7,7 @@ import About_us from "../../../assets/Images/common.jpg";
 import StikyNav from "../Common/StikyNav";
 import Mega_Menu from "../Common/Mega_Menu";
 import Footer from '../Common/Footer';
-import { API_BASE_URL } from '../Common/Config/Config'; // Import the base URL
+import { API_BASE_URL } from '../Common/Config/Config'; 
 
 const MySwal = withReactContent(Swal);
 

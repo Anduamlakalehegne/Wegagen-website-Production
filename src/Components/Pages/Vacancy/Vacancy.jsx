@@ -20,7 +20,7 @@ const VacanciesTable = () => {
     }, []);
 
     const data = useMemo(() => vacancies.map(vacancy => ({
-        no: vacancy.attributes.no,
+        no: vacancy.attributes.no, 
         position: vacancy.attributes.position,
         jobPurpose: vacancy.attributes.Job_Purpose,
         qualification: vacancy.attributes.Qualification_Required_and_Experience,
@@ -48,20 +48,20 @@ const VacanciesTable = () => {
             accessor: 'qualification',
         },
         {
-            Header: 'Place of Work',
-            accessor: 'placeOfWork',
+            Header: 'Place of Work', 
+            accessor: 'placeOfWork', 
         },
         {
-            Header: 'Required Number',
-            accessor: 'Required_Number',
+            Header: 'Required Number', 
+            accessor: 'Required_Number', 
         },
         {
-            Header: 'Grade',
-            accessor: 'Grade',
+            Header: 'Grade', 
+            accessor: 'Grade', 
         },
     ], []);
 
-    const tableInstance = useTable({ columns, data });
+    const tableInstance = useTable({ columns, data }); 
 
     const {
         getTableProps,
@@ -81,8 +81,8 @@ const VacanciesTable = () => {
                 <img src={About_us} ></img>
             </div>
 
-            <p style={{ fontSize: '30px', marginTop: '20px', }}>Career</p> 
-            <table {...getTableProps()} className={styles.vacanciesTable}>
+            <p style={{ fontSize: '30px', marginTop: '20px', }}>Career</p>  
+            <table {...getTableProps()} className={styles.vacanciesTable}> 
                 <thead>
                     {headerGroups.map(headerGroup => (
                         <tr {...headerGroup.getHeaderGroupProps()}>
@@ -105,10 +105,10 @@ const VacanciesTable = () => {
                     })}
                 </tbody>
             </table>
-            <div className={styles.vacanciesApplyLink}>
+            <div className={styles.vacanciesApplyLink}> 
                 <p>
                     Applicants fulfilling the stated criteria could send their applications with CV and copy of
-                    testimonials through <a href="https://vacancy.wegagenbanksc.com.et:9090" style={{color:'#ff6b0b'}}>https://vacancy.wegagenbanksc.com.et:9090</a> from Monday August 12, 2024 to Saturday August 17, 2024, Tel. 0115-523800.
+                    testimonials through <a href="https://vacancy.wegagenbanksc.com.et:9090" style={{color:'#ff6b0b'}}>https://vacancy.wegagenbanksc.com.et:9090</a> from Monday December 09, 2024 to Saturday December 14, 2024, Tel. 0115-523800.
                 </p>
             </div>
 
