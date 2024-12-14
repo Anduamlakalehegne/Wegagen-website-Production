@@ -13,6 +13,7 @@ const VacanciesTable = () => {
         const fetchVacancies = async () => {
             const response = await fetch('https://weg.back.strapi.wegagen.com/api/external-vacancies');
             const data = await response.json();
+            console.log(data);  // Check the API response
             setVacancies(data.data);
         };
 
@@ -20,20 +21,22 @@ const VacanciesTable = () => {
     }, []);
 
     const data = useMemo(() => vacancies.map(vacancy => ({
-        no: vacancy.attributes.no, 
+        no: vacancy.attributes.no,
         position: vacancy.attributes.position,
         jobPurpose: vacancy.attributes.Job_Purpose,
         qualification: vacancy.attributes.Qualification_Required_and_Experience,
         placeOfWork: vacancy.attributes.Place_of_Work,
         Required_Number: vacancy.attributes.Required_Number,
         Grade: vacancy.attributes.Grade,
-        // Add other attributes you want to include in the table
+        fromDate: vacancy.attributes.From_Date || 'N/A',  // Use fallback
+        toDate: vacancy.attributes.To_Date || 'N/A',    // Use fallback
+        dateRange: `${vacancy.attributes.From_Date || 'N/A'} - ${vacancy.attributes.To_Date || 'N/A'}`, // Combine dates
     })), [vacancies]);
 
     const columns = useMemo(() => [
         {
             Header: 'No',
-            accessor: 'no', // accessor is the "key" in the data
+            accessor: 'no',
         },
         {
             Header: 'Position',
@@ -48,20 +51,25 @@ const VacanciesTable = () => {
             accessor: 'qualification',
         },
         {
-            Header: 'Place of Work', 
-            accessor: 'placeOfWork', 
+            Header: 'Place of Work',
+            accessor: 'placeOfWork',
         },
         {
-            Header: 'Required Number', 
-            accessor: 'Required_Number', 
+            Header: 'Required Number',
+            accessor: 'Required_Number',
         },
         {
-            Header: 'Grade', 
-            accessor: 'Grade', 
+            Header: 'Grade',
+            accessor: 'Grade',
+        },
+        {
+            Header: 'Date',
+            accessor: 'dateRange', // Use the new dateRange property
+            style: { width: '180px' },
         },
     ], []);
 
-    const tableInstance = useTable({ columns, data }); 
+    const tableInstance = useTable({ columns, data });
 
     const {
         getTableProps,
@@ -73,21 +81,23 @@ const VacanciesTable = () => {
 
     return (
         <>
-
             <Mega_Menu />
             <StikyNav />
 
             <div className={styles.agarImage}>
-                <img src={About_us} ></img>
+                <img src={About_us} alt="About Us" />
             </div>
 
-            <p style={{ fontSize: '30px', marginTop: '20px', }}>Career</p>  
-            <table {...getTableProps()} className={styles.vacanciesTable}> 
+            <p style={{ fontSize: '30px', marginTop: '20px' }}>Career</p>
+
+            <table {...getTableProps()} className={styles.vacanciesTable}>
                 <thead>
                     {headerGroups.map(headerGroup => (
                         <tr {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map(column => (
-                                <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                                <th {...column.getHeaderProps({ style: column.style })}>
+                                    {column.render('Header')}
+                                </th>
                             ))}
                         </tr>
                     ))}
@@ -98,22 +108,24 @@ const VacanciesTable = () => {
                         return (
                             <tr {...row.getRowProps()}>
                                 {row.cells.map(cell => (
-                                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                    <td {...cell.getCellProps({ style: cell.column.style })}>
+                                        {cell.render('Cell')}
+                                    </td>
                                 ))}
                             </tr>
                         );
                     })}
                 </tbody>
             </table>
-            <div className={styles.vacanciesApplyLink}> 
+
+            <div className={styles.vacanciesApplyLink}>
                 <p>
                     Applicants fulfilling the stated criteria could send their applications with CV and copy of
-                    testimonials through <a href="https://vacancy.wegagenbanksc.com.et:9090" style={{color:'#ff6b0b'}}>https://vacancy.wegagenbanksc.com.et:9090</a> from Monday December 09, 2024 to Saturday December 14, 2024, Tel. 0115-523800.
+                    testimonials through <a href="https://vacancy.wegagenbanksc.com.et:9090" style={{ color: '#ff6b0b' }}>https://vacancy.wegagenbanksc.com.et:9090</a>
                 </p>
             </div>
 
             <Footer />
-
         </>
     );
 };
