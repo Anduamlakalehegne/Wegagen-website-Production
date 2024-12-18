@@ -64,7 +64,7 @@ const VacanciesTable = () => {
         },
         {
             Header: 'Date',
-            accessor: 'dateRange', // Use the new dateRange property
+            accessor: 'dateRange', 
             style: { width: '180px' },
         },
     ], []);

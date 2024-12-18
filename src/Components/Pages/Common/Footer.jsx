@@ -230,6 +230,7 @@ export default function Footer({ footerColor }) {
           <Link to="/Branch_Location" style={{ textDecoration: 'none' }}><p>Branches</p></Link>
           <Link to="/Vacancy" style={{ textDecoration: 'none' }}><p>Career</p></Link>
           <p onClick={() => { cardstoggle() }}>Terms & Tariffs</p>
+          <Link to="/wegagen-privacy-Policy" style={{ textDecoration: "none" }}><p>Wegagen Bank's polices</p> </Link>
         </div>
 
         <div className='customerSupport2'>

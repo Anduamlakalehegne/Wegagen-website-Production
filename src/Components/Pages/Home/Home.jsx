@@ -111,7 +111,6 @@ export default function Home() {
 
 
   const [dispaly, setDisplay] = useState(1);
-  const [counterOn, setCounterON] = useState(false);
 
   const cardstoggle = () => {
     const MySwal = withReactContent(Swal);
@@ -452,6 +451,28 @@ export default function Home() {
       });
   }, []);
 
+  const iconMap = {
+    FaUserTie: <FaUserTie />,
+    FaUsers: <FaUsers />,
+    BsBank: <BsBank />,
+    GrAtm: <GrAtm />,
+    MdSupportAgent: <MdSupportAgent />,
+    TbHttpPost: <TbHttpPost />,
+  };
+
+  const [stats, setStats] = useState([]);
+  const [counterOn, setCounterOn] = useState(false);
+  useEffect(() => {
+    // Fetch data from Strapi
+    axios
+      .get("https://weg.back.strapi.wegagen.com/api/stats")
+      .then((response) => {
+        // Update stats from the API response
+        setStats(response.data.data);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <div>
       <NotificationPopup />
@@ -567,7 +588,7 @@ export default function Home() {
             <div className={styles.popOuter}>
               <div
                 className={styles.popexchange}
-                style={{ marginBottom: "10px" }} 
+                style={{ marginBottom: "10px" }}
               >
                 <div className={styles.tableContainer}>
                   {/* <Link to="/Rate_History" style={{ textDecoration: 'none' }}>
@@ -1212,102 +1233,25 @@ export default function Home() {
         </div>
 
         <div className={styles.wrapper}>
-          <div className={styles.container}>
-            <i>
-              <FaUserTie />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {counterOn && <CountUp start={0} end={3638749} duration={3} />}{" "}
-                +
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>Customers</span>
-          </div>
+          {stats.map((stat) => {
+            const { id, attributes } = stat;
+            const { Name, Value, Icon, Color } = attributes;
 
-          <div className={styles.container}>
-            <i>
-              <FaUsers />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {/* <div style={{ fontSize: "15px" }}> */}
-                {counterOn && <CountUp start={0} end={5426} duration={4} />} +
-                {/* </div> */}
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>Employees</span>
-          </div>
-
-          <div className={styles.container}>
-            <i>
-              <BsBank />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {/* <div style={{ fontSize: "15px" }}> */}
-                {counterOn && <CountUp start={0} end={441} duration={5} />} +
-                {/* </div> */}
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>Branches</span>
-          </div>
-
-          <div className={styles.container}>
-            <i style={{ color: "#ff6b0b" }}>
-              <GrAtm color="#ff6b0b" />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {/* <div style={{ fontSize: "15px" }}> */}
-                {counterOn && <CountUp start={0} end={385} duration={6} />}+
-                {/* </div> */}
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>ATMs</span>
-          </div>
-
-          <div className={styles.container}>
-            <i style={{ color: "#ff6b0b" }}>
-              <MdSupportAgent color="#ff6b0b" />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {counterOn && <CountUp start={0} end={4800} duration={7} />}+
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>Agents</span>
-          </div>
-
-          <div className={styles.container}>
-            <i style={{ color: "#ff6b0b", fontSize: "35px" }}>
-              <TbHttpPost color="#ff6b0b" />
-            </i>
-            <span className={styles.num} data-val="340">
-              <ScrollTrigger
-                onEnter={() => setCounterON(true)}
-                onExit={() => setCounterON(false)}
-              >
-                {counterOn && <CountUp start={0} end={430} duration={8} />}+
-              </ScrollTrigger>
-            </span>
-            <span className={styles.text}>POS</span>
-          </div>
+            return (
+              <div key={id} className={styles.container}>
+                <i style={{ color: Color || "#000" }}>{iconMap[Icon]}</i>
+                <span className={styles.num}>
+                  <ScrollTrigger
+                    onEnter={() => setCounterOn(true)}
+                    onExit={() => setCounterOn(false)}
+                  >
+                    {counterOn && <CountUp start={0} end={Value} duration={3} />} +
+                  </ScrollTrigger>
+                </span>
+                <span className={styles.text}>{Name}</span>
+              </div>
+            );
+          })}
         </div>
 
         {/* <div className={styles.map} >

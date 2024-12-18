@@ -57,6 +57,8 @@ import TermsAndConditions from "./Components/Pages/Terms_and_Conditions/TermsAnd
 import PrivacyPolicy from "./Components/Pages/PrivacyPolicy/PrivacyPolicy";
 import EfoytaPrivacyPolicy from "./Components/Pages/PrivacyPolicy/EfoytaPrivacyPolicy";
 import Share_Terms_and_Tariffs from "./Components/Pages/Terms and Tariffs/Share_Terms_and_Tariffs";
+import CyberSecurtyPolicy from "./Components/Pages/PrivacyPolicy/CyberSecurtyPolicy";
+import WegagenPrivacyPolicy from "./Components/Pages/PrivacyPolicy/WegagenPolicy";
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 // import JinglePlayer from './Components/Pages/JinglePlayer';
 
@@ -166,7 +168,8 @@ function App() {
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/privacy-and-police" element={<PrivacyPolicy />} />
           <Route path="/efoyta-privacy-Policy" element={<EfoytaPrivacyPolicy />} />
-          
+          <Route path="/cyber-privacy-Policy" element={<CyberSecurtyPolicy />} />
+          <Route path="/wegagen-privacy-Policy" element={<WegagenPrivacyPolicy />} />
         </Routes>
       </BrowserRouter>
     </div>

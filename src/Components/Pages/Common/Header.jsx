@@ -232,6 +232,11 @@ function Header({ path }) {
     navigate("/Rate_History");
   };
 
+  const navigateToCyber = () => {
+    navigate("/cyber-privacy-Policy");
+  };
+
+
   return (
     <>
       <div className="header1">
@@ -273,6 +278,13 @@ function Header({ path }) {
           </label> */}
           {/* <label><span>Call 6782</span></label> */}
           <label><span><a href="https://edif.gov.et">EDIF</a></span></label>
+          <label
+            onClick={() => {
+              navigateToCyber();
+            }}
+          >
+            Cybersecurity Info
+          </label>
         </div>
         <div className="socialMediasLinks animate__animated animate__fadeInRight">
           <label>
