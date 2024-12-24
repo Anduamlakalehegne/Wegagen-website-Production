@@ -233,9 +233,8 @@ function Header({ path }) {
   };
 
   const navigateToCyber = () => {
-    navigate("/cyber-privacy-Policy");
+    navigate("/cybersecurity-tips");
   };
-
 
   return (
     <>
@@ -277,7 +276,11 @@ function Header({ path }) {
             Rate History
           </label> */}
           {/* <label><span>Call 6782</span></label> */}
-          <label><span><a href="https://edif.gov.et">EDIF</a></span></label>
+          <label>
+            <span>
+              <a href="https://edif.gov.et">EDIF</a>
+            </span>
+          </label>
           <label
             onClick={() => {
               navigateToCyber();

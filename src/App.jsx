@@ -24,34 +24,34 @@ import School_management from "./Components/Pages/DigitalBanking/School_manageme
 import MobileBanking from "./Components/Pages/DigitalBanking/MobileBanking";
 import InternetBanking from "./Components/Pages/DigitalBanking/InternetBanking";
 // import TradeService from './Components/Pages/International_Banking/International_Banking';
-import LoanCalculator from './Components/Pages/Common/Loan Calculator/LoanCalculator';
-import AgentBanking from './Components/Pages/DigitalBanking/AgentBanking'
-import Asset_Financing_Loans from './Components/Pages/Personal Loan/Asset_Financing_Loans';
-import Letter_of_Bank_Guarantee_Facilities from './Components/Pages/Personal Loan/Letter_of_Bank_Guarantee_Facilities';
-import Rental_Loan from './Components/Pages/Personal Loan/Rental_Loan';
-import Diaspora_Loans from './Components/Pages/Personal Loan/Diaspora_Loans';
-import Personal_Loans_for_Salaried_Persons from './Components/Pages/Personal Loan/Personal_Loans_for_Salaried_Persons';
-import International_Banking from './Components/Pages/International_Banking/International_Banking';
-import Financing_Products from './Components/Pages/Interest Free/Financing_Products';
-import Guarantee_Kafalah from './Components/Pages/Interest Free/Guarantee_Kafalah';
-import Personal_Banking from './Components/Pages/Personal Banking/Personal_Banking';
-import Working_Capital_Loan from './Components/Pages/Personal Loan/Working_Capital_Loan';
-import Branch_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Branch_Terms_And_Tariffs';
-import Digital_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Digital_Terms_And_Tariffs';
-import Credit_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Credit_Terms_And_Tariffs';
-import International_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/International_Terms_And_Tariffs';
-import IFB_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/IFB_Terms_And_Tariffs';
-import Gallery from './Components/Pages/News/Gallery';
-import Interest_Rate from './Components/Pages/Terms and Tariffs/Interest_Rate';
-import NewsLetter from './Components/Pages/News/NewsLetter';
-import ATM_Location from './Components/Pages/Locations/ATM_Location';
-import Branch_Location from './Components/Pages/Locations/Branch_Location';
-import Vacancy from './Components/Pages/Vacancy/Vacancy';
-import Bid from './Components/Pages/Bid/Bid';
-import Notification from './Components/Pages/Notification/Notification';
-import BankFormat from './Components/Pages/News/BankFormats';
-import Efoyta_Terms_And_Tariffs from './Components/Pages/Terms and Tariffs/Efoyta_Terms_And_Tariffs';
-import EnvironmentalPolicy from './Components/Pages/News/EnvironmentalPolicy';
+import LoanCalculator from "./Components/Pages/Common/Loan Calculator/LoanCalculator";
+import AgentBanking from "./Components/Pages/DigitalBanking/AgentBanking";
+import Asset_Financing_Loans from "./Components/Pages/Personal Loan/Asset_Financing_Loans";
+import Letter_of_Bank_Guarantee_Facilities from "./Components/Pages/Personal Loan/Letter_of_Bank_Guarantee_Facilities";
+import Rental_Loan from "./Components/Pages/Personal Loan/Rental_Loan";
+import Diaspora_Loans from "./Components/Pages/Personal Loan/Diaspora_Loans";
+import Personal_Loans_for_Salaried_Persons from "./Components/Pages/Personal Loan/Personal_Loans_for_Salaried_Persons";
+import International_Banking from "./Components/Pages/International_Banking/International_Banking";
+import Financing_Products from "./Components/Pages/Interest Free/Financing_Products";
+import Guarantee_Kafalah from "./Components/Pages/Interest Free/Guarantee_Kafalah";
+import Personal_Banking from "./Components/Pages/Personal Banking/Personal_Banking";
+import Working_Capital_Loan from "./Components/Pages/Personal Loan/Working_Capital_Loan";
+import Branch_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/Branch_Terms_And_Tariffs";
+import Digital_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/Digital_Terms_And_Tariffs";
+import Credit_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/Credit_Terms_And_Tariffs";
+import International_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/International_Terms_And_Tariffs";
+import IFB_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/IFB_Terms_And_Tariffs";
+import Gallery from "./Components/Pages/News/Gallery";
+import Interest_Rate from "./Components/Pages/Terms and Tariffs/Interest_Rate";
+import NewsLetter from "./Components/Pages/News/NewsLetter";
+import ATM_Location from "./Components/Pages/Locations/ATM_Location";
+import Branch_Location from "./Components/Pages/Locations/Branch_Location";
+import Vacancy from "./Components/Pages/Vacancy/Vacancy";
+import Bid from "./Components/Pages/Bid/Bid";
+import Notification from "./Components/Pages/Notification/Notification";
+import BankFormat from "./Components/Pages/News/BankFormats";
+import Efoyta_Terms_And_Tariffs from "./Components/Pages/Terms and Tariffs/Efoyta_Terms_And_Tariffs";
+import EnvironmentalPolicy from "./Components/Pages/News/EnvironmentalPolicy";
 import RateHistory from "./Components/Pages/RateHistory/RateHistory";
 import TermsAndConditions from "./Components/Pages/Terms_and_Conditions/TermsAndConditions";
 import PrivacyPolicy from "./Components/Pages/PrivacyPolicy/PrivacyPolicy";
@@ -150,14 +150,17 @@ function App() {
             path="/Efoyta_Terms_And_Tariffs"
             element={<Efoyta_Terms_And_Tariffs />}
           />
-           <Route
+          <Route
             path="/Share_Terms_and_Tariffs"
             element={<Share_Terms_and_Tariffs />}
           />
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Interest_Rate" element={<Interest_Rate />} />
           <Route path="/NewsLetter" element={<NewsLetter />} />
-          <Route path="/environmentalPolicy" element={<EnvironmentalPolicy />} />
+          <Route
+            path="/environmentalPolicy"
+            element={<EnvironmentalPolicy />}
+          />
           <Route path="/ATM_Location" element={<ATM_Location />} />
           <Route path="/Branch_Location" element={<Branch_Location />} />
           <Route path="/Vacancy" element={<Vacancy />} />
@@ -165,11 +168,20 @@ function App() {
           <Route path="/Notification" element={<Notification />} />
           <Route path="/BankFormat" element={<BankFormat />} />
           <Route path="/Rate_History" element={<RateHistory />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
           <Route path="/privacy-and-police" element={<PrivacyPolicy />} />
-          <Route path="/efoyta-privacy-Policy" element={<EfoytaPrivacyPolicy />} />
-          <Route path="/cyber-privacy-Policy" element={<CyberSecurtyPolicy />} />
-          <Route path="/wegagen-privacy-Policy" element={<WegagenPrivacyPolicy />} />
+          <Route
+            path="/efoyta-privacy-Policy"
+            element={<EfoytaPrivacyPolicy />}
+          />
+          <Route path="/cybersecurity-tips" element={<CyberSecurtyPolicy />} />
+          <Route
+            path="/wegagen-privacy-Policy"
+            element={<WegagenPrivacyPolicy />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

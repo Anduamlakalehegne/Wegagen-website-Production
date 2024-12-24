@@ -212,12 +212,32 @@ function WegagenPrivacyPolicy() {
               regarding your personal data:
             </Typography>
             <ul style={{ paddingLeft: "20px" }}>
-              <li>Right to Access</li>
-              <li>Right to Rectification</li>
-              <li>Right to Erasure</li>
-              <li>Right to Data Portability</li>
-              <li>Right to Object</li>
-              <li>Right to Withdraw Consent</li>
+              <li>
+                <strong>Right to Access</strong>: You have the right to request
+                a copy of your personal data held by Wegagen Bank.
+              </li>
+              <li>
+                <strong>Right to Rectification</strong>: You can request
+                corrections to any inaccurate or incomplete personal data.
+              </li>
+              <li>
+                <strong>Right to Erasure</strong>: You have the right to request
+                the deletion of your personal data under certain conditions.
+              </li>
+              <li>
+                <strong>Right to Data Portability</strong>: You can request a
+                transfer of your personal data to another financial service
+                provider.
+              </li>
+              <li>
+                <strong>Right to Object</strong>: You can object to the
+                processing of your personal data for direct marketing purposes.
+              </li>
+              <li>
+                <strong>Right to Withdraw Consent</strong>: If you have provided
+                consent for data processing, you have the right to withdraw it
+                at any time.
+              </li>
             </ul>
           </TabPanel>
 

@@ -13,7 +13,7 @@ import {
   Divider,
 } from "@mui/material";
 
-export default function CyberSecurtyPolicy() { 
+export default function CyberSecurtyPolicy() {
   return (
     <>
       <StikyNav />
@@ -94,7 +94,7 @@ export default function CyberSecurtyPolicy() {
               </List>
             </div>
 
-            <div>
+            <div className="md:col-span-2">
               <Typography
                 variant="h4"
                 gutterBottom
@@ -138,7 +138,7 @@ export default function CyberSecurtyPolicy() {
               </Card>
             </div>
 
-            <div>
+            <div className="md:col-span-2">
               <Typography
                 variant="h4"
                 gutterBottom
@@ -148,7 +148,7 @@ export default function CyberSecurtyPolicy() {
               >
                 Additional Security Tips
               </Typography>
-              <div className="flex flex-col md:flex-row md:gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row md:gap-5">
                 <Card variant="outlined" style={{ marginBottom: "20px" }}>
                   <CardContent>
                     <Typography variant="h6" fontSize={19} gutterBottom>
@@ -186,6 +186,228 @@ export default function CyberSecurtyPolicy() {
                       </ListItem>
                       <ListItem>
                         <ListItemText primary="Change passwords regularly and avoid reusing old ones." />
+                      </ListItem>
+                    </List>
+                  </CardContent>
+                </Card>
+
+                <Card variant="outlined" style={{ marginBottom: "20px" }}>
+                  <CardContent>
+                    <Typography variant="h6">
+                      Social Engineering Threats and How to Avoid Them
+                    </Typography>
+                    <List>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Phishing Awareness</strong> :- Be
+                              cautious of emails or messages that ask you to
+                              click on links or provide personal information.
+                              Verify the sender's email address and look for
+                              signs of phishing, such as misspellings and urgent
+                              language.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>
+                                • Vishing (Voice Phishing) Protection
+                              </strong>
+                              :- If you receive a call from someone claiming to
+                              be from the bank, do not share your PIN or account
+                              details. Call back using the official bank contact
+                              number to verify.
+                              <strong className="text-orange-600">
+                                Wegagen Bank Official Contact Number is 866.
+                              </strong>
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Smishing (SMS Phishing) Caution</strong>{" "}
+                              :- Do not click on links sent via SMS from unknown
+                              or suspicious numbers. Fraudsters may use text
+                              messages to steal your information.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Call Center Fraud Defense</strong> :-
+                              When receiving calls from the bank, never provide
+                              personal information unless you initiated the
+                              call. Banks will not ask for sensitive information
+                              over the phone.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Avoid Email Spoofing</strong> :- Be
+                              skeptical of emails that seem to come from bank
+                              but contain links or attachments. Always type the
+                              bank’s URL directly into your browser instead of
+                              clicking links in emails.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                    </List>
+                  </CardContent>
+                </Card>
+
+                <Card variant="outlined" style={{ marginBottom: "20px" }}>
+                  <CardContent>
+                    <Typography variant="h6">
+                      Mobile and Internet Banking Security Tips
+                    </Typography>
+                    <List>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Use the Official Bank App</strong> :-
+                              Only download mobile banking apps from official
+                              app stores (Google Play Store, Apple App Store) or
+                              directly from the bank’s website. Links{" "}
+                              <a
+                                href="https://play.google.com/store/apps/details?id=com.act.wegagen&hl"
+                                className="no-underline text-orange-400 font-semibold hover:no-underline hover:text-orange-600"
+                                target="_blank"
+                              >
+                                google playstore
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                href="https://apps.apple.com/in/app/wegagen-mobile/id6472656143"
+                                className="no-underline text-orange-400 font-semibold hover:no-underline hover:text-orange-600"
+                                target="_blank"
+                              >
+                                app store
+                              </a>
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Secure Your Device</strong> :- Keep your
+                              mobile and computer updated with the latest
+                              software and antivirus protection. Use strong
+                              passwords and biometric security (fingerprint/face
+                              recognition).
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Enable Alerts</strong> :- Set up and
+                              always check SMS or email alerts for any
+                              transactions made with your account to detect
+                              unauthorized activity quickly.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Avoid Public Wi-Fi</strong> :- Never use
+                              public Wi-Fi for accessing your bank account.
+                              Fraudsters can easily intercept your data on
+                              unsecured networks.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Log Out When Finished</strong> :- Always
+                              log out of your Mobile/Internet banking session
+                              when finished, especially on shared or public
+                              devices.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                    </List>
+                  </CardContent>
+                </Card>
+
+                <Card variant="outlined" style={{ marginBottom: "20px" }}>
+                  <CardContent>
+                    <Typography variant="h6">
+                      Security Tips for ATM Usage and Card Security
+                    </Typography>
+                    <List>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Choose Well-Lit ATMs</strong> :- Use
+                              ATMs in secure, well-lit locations. If the ATM
+                              machine looks tampered with or feels suspicious,
+                              do not use it.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Cover Your PIN Entry</strong> :- Use
+                              your hand to shield the keypad when entering your
+                              PIN. Fraudsters may place hidden cameras to
+                              capture your PIN.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Keep Your Cards Safe</strong> :- Store
+                              your cards in a secure place and report any lost
+                              or stolen cards immediately.
+                            </>
+                          }
+                        />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemText
+                          primary={
+                            <>
+                              <strong>• Set Spending Alerts</strong> :- Enable
+                              SMS alerts for card transactions to get notified
+                              of any suspicious activity immediately.
+                            </>
+                          }
+                        />
                       </ListItem>
                     </List>
                   </CardContent>
