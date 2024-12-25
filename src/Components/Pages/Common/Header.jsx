@@ -233,7 +233,7 @@ function Header({ path }) {
   };
 
   const navigateToCyber = () => {
-    navigate("/cybersecurity-tips");
+    navigate("/cybersecurity-awerness-tips");
   };
 
   return (

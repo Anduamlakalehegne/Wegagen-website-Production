@@ -177,9 +177,12 @@ function App() {
             path="/efoyta-privacy-Policy"
             element={<EfoytaPrivacyPolicy />}
           />
-          <Route path="/cybersecurity-tips" element={<CyberSecurtyPolicy />} />
           <Route
-            path="/wegagen-privacy-Policy"
+            path="/cybersecurity-awerness-tips"
+            element={<CyberSecurtyPolicy />}
+          />
+          <Route
+            path="/wegagen-privacy-policy"
             element={<WegagenPrivacyPolicy />}
           />
         </Routes>
