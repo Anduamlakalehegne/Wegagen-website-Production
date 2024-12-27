@@ -3,7 +3,6 @@ import "animate.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { MdMenuOpen } from "react-icons/md";
-import { IoIosDoneAll } from "react-icons/io";
 import About_us from "../../../assets/Images/common.jpg";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
