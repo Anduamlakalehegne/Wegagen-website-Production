@@ -4,6 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { MdMenuOpen } from "react-icons/md";
 import { IoIosDoneAll } from "react-icons/io";
+import About_us from "../../../assets/Images/common.jpg";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import styles from "../Personal Loan/personalLoan.module.css";
@@ -100,6 +101,10 @@ export default function CyberSecurtyPolicy() {
     <div>
       <StikyNav />
       <Mega_Menu />
+
+      <div className={styles.agarImage}>
+        <img src={About_us}></img>
+      </div>
 
       <h2 className="text-3xl text-[#004360] font-bold my-5">
         Cyber Security Awareness
