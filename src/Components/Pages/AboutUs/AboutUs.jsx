@@ -1088,7 +1088,7 @@ export default function AboutUs() {
                     >
                       Started Operations
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       June,1997 started operations on with two Branches namely:
                       Goffa and Meskel
                     </p>
@@ -1155,7 +1155,7 @@ export default function AboutUs() {
                     >
                       10th Anniversary
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       June 2007,Celebrated 10th Anniversary
                     </p>
                   </VerticalTimelineElement>
@@ -1222,7 +1222,7 @@ export default function AboutUs() {
                     >
                       Omni Enterprise Core Banking System
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       August 2011,upgraded its banking technology to Omni
                       Enterprise Core Banking System
                     </p>
@@ -1287,7 +1287,7 @@ export default function AboutUs() {
                     >
                       Opens Its 100th Branch
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       December 2014,opens its 100th branch
                     </p>
                   </VerticalTimelineElement>
@@ -1328,6 +1328,40 @@ export default function AboutUs() {
                   </VerticalTimelineElement>
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
+                    date="2016"
+                    dateClassName="dateClassName"
+                    contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
+                    contentStyle={{
+                      background: "#e3e3e3",
+                      color: "#5d5d5d",
+                      paddingRight: "50px",
+                    }}
+                    iconStyle={{
+                      background: "#ff8f12",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                    icon={<span style={{ fontSize: "1.8vh" }}> Feb 17</span>}
+                  >
+                    <h6
+                      style={{
+                        fontSize: "17px",
+                        color: "#ff8f12",
+                        textAlign: "left",
+                        marginBottom: "-10px",
+                      }}
+                      className="vertical-timeline-element-title"
+                    >
+                     Interest Free Banking
+                    </h6>
+                    <p style={{ fontSize: "13px", textAlign: "left" }}>
+                    February 2016, Started Operating Interest Free Banking
+                    </p>
+                  </VerticalTimelineElement>
+                  <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
                     contentStyle={{ background: "#e3e3e3", color: "#5d5d5d" }}
                     date="2016"
                     contentArrowStyle={{ borderRight: "7px solid  #e3e3e3" }}
@@ -1345,7 +1379,7 @@ export default function AboutUs() {
                       style={{
                         fontSize: "16px",
                         color: "#ff6b0b",
-                        textAlign: "left",
+                        textAlign: "right",
                         marginBottom: "-10px",
                       }}
                       className="vertical-timeline-element-title"
@@ -1379,14 +1413,14 @@ export default function AboutUs() {
                       style={{
                         fontSize: "17px",
                         color: "#ff8f12",
-                        textAlign: "right",
+                        textAlign: "left",
                         marginBottom: "-10px",
                       }}
                       className="vertical-timeline-element-title"
                     >
                       ATMs Reach 200
                     </h6>
-                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       January 2017, number of ATMs reach 200
                     </p>
                   </VerticalTimelineElement>
@@ -1409,7 +1443,7 @@ export default function AboutUs() {
                       style={{
                         fontSize: "16px",
                         color: "#ff6b0b",
-                        textAlign: "left",
+                        textAlign: "right",
                         marginBottom: "-10px",
                       }}
                       className="vertical-timeline-element-title"
@@ -1446,7 +1480,7 @@ export default function AboutUs() {
                     >
                       500 Million Birr Profit
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       June , 2017 registers over 500 million Birr profit
                     </p>
                   </VerticalTimelineElement>
@@ -1511,7 +1545,7 @@ export default function AboutUs() {
                     >
                       Paid Up Capital
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       June 2017,paid up capital reaches over 2 billion birr
                     </p>
                   </VerticalTimelineElement>
@@ -1576,7 +1610,7 @@ export default function AboutUs() {
                     >
                       Inaugurated Its 33 Storied Headquarters Building
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       September 2017,inaugurated its 33 storied Headquarters
                       Building in the presence of His Excellency , Dr. Mulatu
                       Teshome President of Federal Democratic Republic of
@@ -1643,7 +1677,7 @@ export default function AboutUs() {
                     >
                       Flex Cube Core Banking System
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       January 2018, implemented Flex Cube Core Banking System
                     </p>
                   </VerticalTimelineElement>
@@ -1707,7 +1741,7 @@ export default function AboutUs() {
                     >
                       Employees Reach Over 4,000
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       April 2018,number of employees reach over 4,000
                     </p>
                   </VerticalTimelineElement>
@@ -1741,7 +1775,7 @@ export default function AboutUs() {
                     >
                       Employees Reach Over 5,000
                     </h6>
-                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       june 2021,number of employees reach over 5,000
                     </p>
                   </VerticalTimelineElement>
@@ -1771,7 +1805,7 @@ export default function AboutUs() {
                     >
                       25th Anniversary
                     </h6>
-                    <p style={{ fontSize: "13px" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       October 2022, Celebrated 25th Anniversary
                       {/* <img src={anniversary} style={{ width: '100%', backgroundSize: '100%' }}></img> */}
                     </p>
@@ -1834,14 +1868,14 @@ export default function AboutUs() {
                       style={{
                         fontSize: "17px",
                         color: "#ff6b0b",
-                        textAlign: "right",
+                        textAlign: "left",
                         marginBottom: "-10px",
                       }}
                       className="vertical-timeline-element-title"
                     >
                       Introduced Wegagen Mobile Application
                     </h6>
-                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       Feb 2024, Launched Wegagen Mobile Application
                     </p>
                   </VerticalTimelineElement>
@@ -1904,14 +1938,14 @@ export default function AboutUs() {
                       style={{
                         fontSize: "17px",
                         color: "#ff6b0b",
-                        textAlign: "right",
+                        textAlign: "left",
                         marginBottom: "-10px",
                       }}
                       className="vertical-timeline-element-title"
                     >
                       Introduced Efoyta
                     </h6>
-                    <p style={{ fontSize: "13px", textAlign: "right" }}>
+                    <p style={{ fontSize: "13px", textAlign:'left' }}>
                       July 2024 Launched the Digital Lending " Efoyta " which propels financial inclusion by providing access to finance for nano and SME businesses.
                     </p>
                   </VerticalTimelineElement>
