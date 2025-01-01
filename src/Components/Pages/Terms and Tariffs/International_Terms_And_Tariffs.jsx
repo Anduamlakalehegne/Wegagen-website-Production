@@ -139,7 +139,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service Charge Foreign</td>
-                                    <td>3% per quarter Or Minimum of USD 300</td>
+                                    <td>2% per quarter Or Minimum of USD 300</td>
                                     <td>2.5% per quarter Or Minimum of USD 250</td>
                                     <td></td>
                                     <td>Applicable every quarter(90 days)on LC outstanding Amount</td>
@@ -226,7 +226,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service Charge Foreign</td>
-                                    <td>5% per quarter<br />Or Minimum USD 300</td>
+                                    <td>4% per quarter<br />Or Minimum USD 300</td>
                                     <td>4% or Minimum USD 250</td>
                                     <td></td>
                                     <td>Applicable every quarter(90 days) on increased LC Amount</td>
@@ -286,7 +286,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Purchase order approval commission</td>
-                                    <td>5% or Minimum USD 300</td>
+                                    <td>4% or Minimum USD 300</td>
                                     <td>4% or Minimum USD 250</td>
                                     <td></td>
                                     <td>Applicable on approved purchased order proforma value</td>
@@ -300,14 +300,14 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Purchase order extension commission before expiry</td>
-                                    <td>5% per period on outstanding amount or Minimum USD 150</td>
+                                    <td>4% per period on outstanding amount or Minimum USD 150</td>
                                     <td>4% per quarter on outstanding amount Or Minimum of USD 150</td>
                                     <td></td>
                                     <td>This charge applied if extension is requested and approved before expiry of the PO</td>
                                 </tr>
                                 <tr>
                                     <td>Purchase order extension commission after expiry</td>
-                                    <td>5% per period on outstanding amount or Minimum USD 300</td>
+                                    <td>4% per period on outstanding amount or Minimum USD 300</td>
                                     <td>4% per quarter on outstanding amount Or Minimum of USD 150</td>
                                     <td></td>
                                     <td>This charge applied if extension is requested after expiry of the PO</td>
@@ -429,7 +429,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service Charge </td>
-                                    <td>5% or Minimum USD 250</td>
+                                    <td>4% or Minimum USD 250</td>
                                     <td>4% or Minimum USD 100</td>
                                     <td>4% or Minimum USD 100</td>
                                     <td>Applicable on transfer value</td>
@@ -480,7 +480,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service charge for sea freight </td>
-                                    <td>5% or Minimum USD 150 </td>
+                                    <td>4% or Minimum USD 150 </td>
                                     <td>4% or Minimum USD 150 </td>
                                     <td></td>
                                     <td>Only applied based on freight invoice value</td>
@@ -517,25 +517,25 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Export Letter of Credit (L/C) Advising Fee to other banks</td>
-                                    <td>1500 ETB</td>
-                                    <td>1500 ETB</td>
+                                    <td>1000 ETB</td>
+                                    <td>1000 ETB</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>Amendement Export LC Advised to other banks</td>
-                                    <td>1500 ETB</td>
-                                    <td>1500 ETB</td>
+                                    <td>1000 ETB</td>
+                                    <td>1000 ETB</td>
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                {/* <tr>
                                     <td>Cancelation fee for Export LC to other banks</td>
                                     <td>1500ETB</td>
                                     <td>1500ETB</td>
                                     <td></td>
                                     <td></td>
-                                </tr>
+                                </tr> */}
                                 <tr>
                                     <td>Courier Charge</td>
                                     <td>PER CHARGE</td>
@@ -568,7 +568,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service charge from Birr A/C</td>
-                                    <td>5% for customers having LCY account Or Minimum 1500 Birr Free for WB staff</td>
+                                    <td>4% for customers having LCY account Or Minimum 1500 Birr Free for WB staff</td>
                                     <td>3.5%</td>
                                     <td>3.5%</td>
                                     <td></td>
@@ -598,7 +598,7 @@ const International_Terms_And_Tariffs = () => {
                                 </tr>
                                 <tr>
                                     <td>Service Charge </td>
-                                    <td>5% Per Period or Minimum USD 250</td>
+                                    <td>4% Per Period or Minimum USD 250</td>
                                     <td>4% Per Period or Minimum USD 250</td>
                                     <td></td>
                                     <td></td>
