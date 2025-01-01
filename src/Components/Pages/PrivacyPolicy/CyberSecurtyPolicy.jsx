@@ -170,7 +170,7 @@ export default function CyberSecurtyPolicy() {
         <div>
           {display === 1 && (
             <div
-              className="animate__animated animate__bounceInUp"
+              className="animate__animated "
               style={{ marginBottom: "100px" }}
             >
               <p className={`${styles.title} -mt-5`}>
@@ -210,7 +210,7 @@ export default function CyberSecurtyPolicy() {
 
           {display === 2 && (
             <div
-              className="animate__animated animate__bounceInUp"
+              className="animate__animated "
               style={{ marginBottom: "100px" }}
             >
               <p className={`${styles.title} -mt-5`}>
@@ -248,7 +248,7 @@ export default function CyberSecurtyPolicy() {
 
           {display === 3 && (
             <div
-              className="animate__animated animate__bounceInUp"
+              className="animate__animated "
               style={{ marginBottom: "100px" }}
             >
               <p className={`${styles.title} -mt-5`}>
